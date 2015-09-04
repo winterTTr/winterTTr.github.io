@@ -5,8 +5,7 @@ comments: false
 
 # winterTTr
 
-A serious & humous guy~
-
+Here is about me and my life.
 
 ## Living
 
