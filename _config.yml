@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Ever 17 - Coding Life
-subtitle: winterTTr's Tech Blog
-description:
+title: Ever 17 - Life & Note
+subtitle: winterTTr's Blog
+description: Memo down pieces of Life
 author: winterTTr
 language: en
 timezone:
@@ -83,3 +83,20 @@ social:
   zhihu: http://www.zhihu.com/people/winterTTr
 disqus_shortname: winterTTr
 google_analytics: UA-67136287-1
+baidu_analytics: b464b588b31ebb87bc4b330d0f335ca2
+
+
+# rss
+feed:
+  type: atom
+  path: atom.xml
+  limit: 0
+
+# friend link
+links_title: Favorate Links
+
+links:
+  少数派: http://sspai.com
+
+# google anlytics
+google_site_verification: Ttln8v0wFVFiqhopVjsZ_Xdbe2g1IRKQbbVYZWqcT0k
