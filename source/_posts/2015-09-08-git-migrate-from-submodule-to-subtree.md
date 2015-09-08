@@ -134,11 +134,22 @@ Here is my example:
 >     [master 24a9e7d] remove submodule ace-jump-mode
 >      Committer: winterTTr <winterTTr@gmail.com>
 
-
-
-
 ## Use subtree to obtain snapshot
 
+The common process to get remote repository into subtree:
+1. add remote branch to local track
+> git remote add ace-jump-mode https://github.com/winterTTr/ace-jump-mode.git
+
+2. get the latest version of the code into working tree
+> &gt; git subtree add --prefix .emacs.d/plugins-subtree/ace-jump-mode --squash ace-jump-mode master
+>
+>     git fetch ace-jump-mode master
+>     From https://github.com/winterTTr/ace-jump-mode
+>      * branch            master     -> FETCH_HEAD
+>     Added dir '.emacs.d/plugins-subtree/ace-jump-mode'
+
+3. for further update from remote server
+> &gt; git subtree pull --prefix .emacs.d/plugins-subtree/ace-jump-mode --squash ace-jump-mode
 
 
 
@@ -155,6 +166,7 @@ Here is my example:
 - [Git Tools - Subtree Merging](https://git-scm.com/book/en/v1/Git-Tools-Subtree-Merging)
 - [Alternatives To Git Submodule: Git Subtree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/)
 - [Mastering Git subtrees](https://medium.com/@porteneuve/mastering-git-subtrees-943d29a798ec)
+- [Git Subtree](http://git-memo.readthedocs.org/en/latest/subtree.html)
 
 **Markdown Tips**:
 - If you want to use `<` in your markdown block, you need to escape it as `&lt;`
