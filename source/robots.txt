@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /css/
 Disallow: /*.js$
-
 Sitemap: http://winterTTr.me/sitemap.xml
 
 User-agent: bingbot
