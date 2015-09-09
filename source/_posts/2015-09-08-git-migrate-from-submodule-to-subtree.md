@@ -129,7 +129,7 @@ Here is my example:
 >       deleted:    .emacs.d/plugins/ace-jump-mode
 >       modified:   .gitmodules
 > 
-> ~ $ git commit -m "remove submodule ace-jump-mode"remove submodule ace-jump-mode"
+> ~ $ git commit -m "remove submodule ace-jump-mode"
 > 
 >     [master 24a9e7d] remove submodule ace-jump-mode
 >      Committer: winterTTr <winterTTr@gmail.com>
@@ -138,7 +138,7 @@ Here is my example:
 
 The common process to get remote repository into subtree:
 1. add remote branch to local track
-> git remote add ace-jump-mode https://github.com/winterTTr/ace-jump-mode.git
+> &gt; git remote add ace-jump-mode https://github.com/winterTTr/ace-jump-mode.git
 
 2. get the latest version of the code into working tree
 > &gt; git subtree add --prefix .emacs.d/plugins-subtree/ace-jump-mode --squash ace-jump-mode master

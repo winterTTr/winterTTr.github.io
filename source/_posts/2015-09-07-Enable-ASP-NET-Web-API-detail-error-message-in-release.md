@@ -5,7 +5,7 @@ tags:
   - ASP.NET
 ---
 
-After delploy the asp.net web api application, I found that when a error (exception) occurs, the return message would only be
+After deploy the asp.net web api application, I found that when a error (exception) occurs, the return message would only be
 
 ```json
 {

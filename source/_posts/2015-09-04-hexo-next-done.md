@@ -6,7 +6,7 @@ tags:
   - github page
 ---
 
-I think the hexo + next theme configration should be almost done.
+I think the hexo + next theme configuration should be almost done.
 
 It takes 2 days for all the configuration and I have to say that this should be quick enough for a self build static blog.
 

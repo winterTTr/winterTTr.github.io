@@ -68,7 +68,7 @@ First, we add the fake to the library to we want to fake.
 After this operation, we can find that we have a fake assembly created:
 ![After fakes](http://7xljtv.com1.z0.glb.clouddn.com/after%20add%20fake.jpg)
 
-So right now, we have the fake assembly for system now, and we can control the behavior of system namespace api as below:
+So right now, we have the fake assembly for system now, and we can control the behaviour of system namespace api as below:
 
 ```csharp
 using System;
@@ -337,7 +337,7 @@ Just shim or stub the things you really need, here is one of my example in real 
 
 ## Other Options
 
-- [Moq](https://github.com/Moq/moq4) which is my favorate test framework
+- [Moq](https://github.com/Moq/moq4) which is my favourite test framework
 
 
 
@@ -354,4 +354,4 @@ Just shim or stub the things you really need, here is one of my example in real 
 
 And about markdown:
 
-- [Markdown Chech and cross character](http://stackoverflow.com/questions/712132/in-html-i-can-make-a-checkmark-with-x2713-is-there-a-corresponding-x-mark)
+- [Markdown Check and cross character](http://stackoverflow.com/questions/712132/in-html-i-can-make-a-checkmark-with-x2713-is-there-a-corresponding-x-mark)

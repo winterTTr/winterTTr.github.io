@@ -6,7 +6,7 @@ tags:
 
 ## Before
 
-It is a long time, I do not write something. In fact, there is always something that feels not very satified when writing down something new on web. Because I need to spend too much time on formatting things. Fonts, title, format, bullet and etc, I cannot focus on writing.
+It is a long time, I do not write something. In fact, there is always something that feels not very satisfied when writing down something new on web. Because I need to spend too much time on formatting things. Fonts, title, format, bullet and etc, I cannot focus on writing.
 
 
 ## Now

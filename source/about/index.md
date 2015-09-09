@@ -9,9 +9,9 @@ Here is about me and my life.
 
 ## Living
 
-A software enginner at Microsoft.
+A software engineer at Microsoft.
 
-In fact, i am **linux mind** guy, however, spending lots of time working on windows with C# and focus on:
+In fact, i am **Linux mind** guy, however, spending lots of time working on windows with C# and focus on:
 
 - Azure Cloud Service
 - IoT
@@ -40,7 +40,7 @@ And always:
 - [winterTTr.github.io](https://github.com/winterTTr/winterTTr.github.io/tree/hexo-content) -- Yes, this blog
 - [Emacs Ace Jump Mode](https://github.com/winterTTr/ace-jump-mode)
 - [My Emacs configuration](https://github.com/winterTTr/emacs-of-winterTTr)
-- More is comming :-)
+- More is coming :-)
 
 ## Music Studio & Band
 - [可惜不是你](http://www.tudou.com/programs/view/kMTvEPdxXh0/)

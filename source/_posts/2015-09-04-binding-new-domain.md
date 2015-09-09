@@ -11,7 +11,7 @@ Just register a new domain name from [godaddy](http://godaddy.com), so this blog
 
 I have to say that the `git hub page custom domain manual` is really unclear. And thanks for that someone could give more detail.
 
-About how to setup godaddy, here is good [reference artical](http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html).
+About how to setup godaddy, here is good [reference article](http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html).
 
 Done~~
 
