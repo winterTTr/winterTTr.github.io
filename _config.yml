@@ -101,3 +101,7 @@ links:
 
 # google anlytics
 google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
+
+# site map
+sitemap:
+  path: sitemap.xml
