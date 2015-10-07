@@ -120,7 +120,7 @@ qiniu:
   secret_key: 4hJy9NbPpzM4iY9xtLDjxKuZjV4tOyob4OdQIOLU
   dirPrefix: static
   urlPrefix: http://7xljtv.com1.z0.glb.clouddn.com/static
-  local_dir: source/static
+  local_dir: static
   update_exist: true
   image: 
     folder: images
