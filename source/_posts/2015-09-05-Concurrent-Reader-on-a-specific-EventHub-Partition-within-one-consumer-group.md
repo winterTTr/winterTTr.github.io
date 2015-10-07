@@ -103,7 +103,7 @@ public void Concurrent_Readers_On_1Partition_1ConsumerGroup()
 
 First we create more than 5 reader one a specific partition:
 
-![exceptions when more than 5 reader](http://7xljtv.com1.z0.glb.clouddn.com/exception%20more%20than%205%20reader.png)
+{% qnimg "2015-09-05-Concurrent-Reader-on-a-specific-EventHub-Partition-within-one-consumer-group/exception-more-than-5-reader.png" %}
 
 We will received the above exception.
 
