@@ -124,8 +124,13 @@ qiniu:
   update_exist: true
   image: 
     folder: images
-    extend: 
+    extend: ?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/d2hpdGU=
   js:
     folder: js
   css:
     folder: css
+
+
+# baidu sitemap
+baidusitemap:
+  path: baidusitemap.xml
