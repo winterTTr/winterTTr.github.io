@@ -134,3 +134,6 @@ qiniu:
 # baidu sitemap
 baidusitemap:
   path: baidusitemap.xml
+
+# Swift insite search
+swiftype_key: WRpxR8GrCr4jNe6LcLyU

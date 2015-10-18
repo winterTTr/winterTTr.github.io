@@ -2,9 +2,9 @@
 menu:
   home: /
   #categories: /categories
-  about: /about
   archives: /archives
   tags: /tags
+  about: /about
   #commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
@@ -91,3 +91,13 @@ images: images
 
 # Theme version
 version: 0.4.5.1
+
+
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons: by-nc-sa
+
+# Specify the date when the site was setup
+since: 2015
