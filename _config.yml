@@ -124,7 +124,7 @@ qiniu:
   update_exist: true
   image: 
     folder: images
-    extend: ?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/d2hpdGU=
+    extend: -watermark
   js:
     folder: js
   css:
