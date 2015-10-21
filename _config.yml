@@ -71,7 +71,9 @@ theme: next
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/winterTTr/winterTTr.github.io.git
+  repo:
+    github: https://github.com/winterTTr/winterTTr.github.io.git
+    gitcafe: https://gitcafe.com/winterTTr/winterTTr.git
 
 
 # Social links
