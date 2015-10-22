@@ -30,6 +30,8 @@ A记录是否删除？
 **References**:
 
 - [Isolating Code Under Test with Microsoft Fakes](https://msdn.microsoft.com/en-us/library/hh549175.aspx)
+- [Hexo博客转移 从github到gitcafe](http://magicer.coding.io/2015/10/Hexo-github-gitcafe/)
+
 
 
 And also:
