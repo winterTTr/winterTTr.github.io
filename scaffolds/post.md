@@ -13,10 +13,10 @@ tags:
 ## Title2
 
 
-{% qnimg test/demo.png title:title alt:description 'class:class1 class2' extend:?imageView2/2/w/600 %}
+{% qnimg test/demo.png title:title alt:description %}
 
 
-{% qnimg test/demo.png title:title alt:description 'class:class1 class2' extend:?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/YmxhY2s= }
+{% qnimg test/demo.png title:title alt:description extend:?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/YmxhY2s= %}
 
 
 ---
