@@ -70,10 +70,17 @@ theme: next
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo:
     github: https://github.com/winterTTr/winterTTr.github.io.git
     gitcafe: https://gitcafe.com/winterTTr/winterTTr.git
+- type: rsync
+  host: ubuntu-ea.cloudapp.net
+  user: rsync
+  root: /var/www/html
+  port: 22
+  delete: true
+  verbose: true
 
 
 # Social links
