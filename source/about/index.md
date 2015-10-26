@@ -43,7 +43,7 @@ And always:
 - More is coming :-)
 
 ## Music Studio & Band
-- [可惜不是你](http://www.tudou.com/programs/view/kMTvEPdxXh0/)
+- [遇见](http://www.tudou.com/programs/view/kMTvEPdxXh0/)
 - [Knocking on the heaven's door](http://www.tudou.com/programs/view/Nst5kLWPFr4/)
 - [光辉岁月](http://www.tudou.com/programs/view/UdB0x2eB_uw/)
 

@@ -1,16 +1,6 @@
 # ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
-
-# when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
-menu:
-  home: /
-  #categories: /categories
-  archives: /archives
-  tags: /tags
-  about: /about
-  #commonweal: /404.html
-
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
 
@@ -33,8 +23,6 @@ icon_font: linecons
 since: 2015
 
 
-
-
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -44,9 +32,9 @@ since: 2015
 menu:
   home: /
   #categories: /categories
-  #about: /about
   archives: /archives
   tags: /tags
+  about: /about
   #commonweal: /404.html
 
 
