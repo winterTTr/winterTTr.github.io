@@ -13,10 +13,60 @@ tags:
 ## Title2
 
 
+
+# sample code
+
+- qiniu picture
 {% qnimg test/demo.png title:title alt:description %}
+{% qnimg test/demo.png title:title alt:description extend:-watermark.black %}
+
+- quote
+{% blockquote [author[, source]] [link] [source_link_title] %}
+content
+{% endblockquote %}
+
+- Code Block
+{% codeblock [title] [lang:language] [url] [link text] %}
+code snippet
+{% endcodeblock %}
+
+- jsFiddle
+{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
+
+- Gist
+{% gist gist_id [filename] %}
+
+- Link
+{% link text url [external] [title] %}
+
+- Include Code
+{% include_code [title] [lang:language] path/to/file %}
 
 
-{% qnimg test/demo.png title:title alt:description extend:?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/YmxhY2s= %}
+- YouTube
+{% youtube video_id %}
+
+- Vimeo
+{% vimeo video_id %}
+
+- Include Posts
+{% post_path slug %}
+{% post_link slug [title] %}
+
+
+- Include Assets
+{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_link slug [title] %}
+
+
+- Raw
+{% raw %}
+content
+{% endraw %}
+
+
+
 
 
 ---
