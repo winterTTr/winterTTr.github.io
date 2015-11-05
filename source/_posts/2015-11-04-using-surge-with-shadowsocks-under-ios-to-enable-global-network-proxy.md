@@ -13,7 +13,7 @@ ios上的网络代理一直是我诟病的话题之一。
 
 随着ios9添加的新的`Network Extension`的特性，surge([App Store](https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637))出现了，利用surge所提供给我们的功能，我们将给出一个近乎完美的全局代理方案。
 
-{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge.JPG" title:surge extend:-wm.h400 %}
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge.JPG" extend:-wm.h400 %}
 
 <!--more-->
 
