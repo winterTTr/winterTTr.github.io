@@ -5,6 +5,8 @@ tags:
   - ios
   - proxy
   - tun
+toc_number: false
+sticky: 0
 ---
 
 ios上的网络代理一直是我诟病的话题之一。
@@ -19,7 +21,7 @@ ios上的网络代理一直是我诟病的话题之一。
 
 # Surge是什么
 
-Surge是一个网络包抓取和代理工具，它是基于ios9中`Network Extension`和`VPN`的新特性而来。
+Surge是一个ios网络包抓取分析工具，它是基于ios9中`Network Extension`和`VPN`的新特性而来。
 Surge是一个基于`规则(Rule)`的可配置型工具，我们可以利用Surge在ios网络层中添加代理，这样可以将ios设备的很多网络数据进行截获，从而实现对网络数据的分析和采集。
 
 如果大家在windows上经常发开http程序的话，想必著名的`fiddler`大家一定不会陌生，在利用代理进行网络数据包分析方面，Surge可以说与`fiddler`的做法是很相似的。
