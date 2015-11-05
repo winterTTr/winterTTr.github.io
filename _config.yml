@@ -86,18 +86,6 @@ deploy:
   verbose: true
 
 
-# Social links
-social:
-  github: https://github.com/winterTTr
-  twitter: https://twitter.com/winterTTr
-  weibo: http://weibo.com/winterTTr
-  douban: http://douban.com/people/winterTTr
-  zhihu: http://www.zhihu.com/people/winterTTr
-disqus_shortname: winterTTr
-google_analytics: UA-67136287-1
-baidu_analytics: 12217b6eff7690192f4e4469013eee76
-
-
 # rss
 feed:
   type: atom
@@ -111,8 +99,6 @@ links:
   少数派: http://sspai.com
   Master Emacs: https://www.masteringemacs.org/
 
-# google anlytics
-google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
 
 # site map
 sitemap:
@@ -145,6 +131,3 @@ qiniu:
 # baidu sitemap
 baidusitemap:
   path: baidusitemap.xml
-
-# Swift insite search
-swiftype_key: WRpxR8GrCr4jNe6LcLyU
