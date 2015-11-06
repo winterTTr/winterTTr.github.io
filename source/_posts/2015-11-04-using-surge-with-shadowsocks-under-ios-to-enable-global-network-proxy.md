@@ -32,84 +32,80 @@ Surge是一个基于`规则(Rule)`的可配置型工具，我们可以利用Surg
 如果想了解surge的具体细节，可以参考官方的主页介绍 [surge.run](http://surge.run)。
 
 
-# Surge的配置
+# Surge配置界面
 Surge并不是一个打开即可以使用的工具，它是一个高可配置的工具。
 打开Surge之后，我们只有一个默认的配置文件。
-
+我们可以看到，默认的配置文件是所有的网络都是直接进行访问(all to Direct)。
 
 {% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge-first-open.jpg" extend:-wm.black.h600 %}
 
+## 编辑已有配置
+点击`Edit`之后，我们可以进行更多的设置
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge edit.jpg" title:点击编辑 extend:-wm.black.h600 %}
+
+对于已有的文件，我们可以更改名称，添加更多的代理，添加规则
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge edit existing config.jpg" title:编辑已有配置 extend:-wm.black.h600 %}
 
 
-## Title2
+## 代理设置
+这个是代理设置界面，在这里，可以添加三种类型的代理，`http`|`https`|`socks5`。
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge proxy.jpg" title:代理配置界面 extend:-wm.black.h600 %}
+
+我们发现，这里并没有我们所需要的`shadowsocks`。是的，`shadowsocks`在界面似乎不可以直接添加，只能通过直接编辑配置文件，添加custom类型的代理。我们随后会说到。
 
 
+## 添加规则
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge rule.jpg" title:规则配置界面 extend:-wm.black.h600 %}
+在规则配置界面中，可以添加三种很多种不同的预定义类型的规则
+- domain: 域名完全匹配
+- suffix: 匹配域名的结尾部分
+- keyword: 域名中包含这个关键字
+- ip: 如果请求的ip地址在范围中， 使用ip加mask的形式，例如：`192.168.1.1/24`
+- GeoIP: 基于ip的地理位置，例如`CN(中国)`，`US(美国)`等等
 
-# sample code
-
-- qiniu picture
-{% qnimg test/demo.png title:title alt:description %}
-{% qnimg test/demo.png title:title alt:description extend:-watermark.black %}
-
-- quote
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-- Code Block
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-- jsFiddle
-{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
-
-- Gist
-{% gist gist_id [filename] %}
-
-- Link
-{% link text url [external] [title] %}
-
-- Include Code
-{% include_code [title] [lang:language] path/to/file %}
+我们添加了规则之后，可以选择当数据包满足规则的时候如何处理：
+- DIRECT: 也就是我们的直连，必经过任何转发，用于访问国内网络
+- REJECT: 拒接链接，比较多的是拦截特定的包，例如广告请求
+- [代理名称]: 默认是没有这一项的，当我们添加了不同代理之后，没一个添加的代理也会出现在这里，所以，我们可以将特定的网络请求转发到一个我们预定义的代理上面，这也是surge中本文最关心的功能。
 
 
-- YouTube
-{% youtube video_id %}
+## 网络下载配置文件
+我们知道，很多时候，大家对于手工配置上文提到的这些东西，是很闲麻烦的。
+所以，网络下载配置文件也是surge非常人性化的feature，我们可以通过URL直接下载surge的配置文件，让他人的东西劳动成果很快的为我们所用。
+这里分享一个很不错的配置文件，源自`surge.pm`网站。
 
-- Vimeo
-{% vimeo video_id %}
+在`编辑已有配置`中，选择`Download configuration from URL`，然后添加
+> http://surge.pm/main.conf
 
-- Include Posts
-{% post_path slug %}
-{% post_link slug [title] %}
-
-
-- Include Assets
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge download.jpg" title:下载配置 extend:-wm.black.h600 %}
 
 
-- Raw
-{% raw %}
-content
-{% endraw %}
+## 更改shadowsocks配置
+我们上文提到的配置文件中，已经为我们添加了shadowsocks的代理，不过，添加的代理只是例子，不能使用，我们需要利用上面提到的更改配置文件的办法，更改这个代理到我们自己的shadowsocks服务器的配置。
+
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge shadowsocks.jpg" title:更改shadowsocks配置 extend:-wm.black.h600 %}
+
+- server: 更改为自己的ss服务器的地址
+- port: 为端口号
+- Username: 直接被当成了ss的加密方式来使用了，不再作为用户名
+- password: ss的登录密码
+
+这样就可以直接使用这个配置文件进行shadowsocks的网络代理了。
+
+# Surge的网络监控功能
+我们上面提到了很多的surge的配置，当然，最原始的初衷，还是为了使用surge进行网络监控。我们可以在`Analytics`选卡中看到
 
 
+## 请求解析
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge request analytics.jpg" title:请求解析 extend:-wm.black.h600 %}
+在请求界面中，我们可以看到具体的每个请求的header和一些相关的参数。据说作者之后会加入请求的body的显示。
 
-
+## 规则分析
+在`Rule`界面中，我们也可以看到规则的相应情况，而且，最人性化的，我们在这里可以动态添加规则项
+{% qnimg "2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge change rule.jpg" title:动态添加规则 extend:-wm.black.h600 %}
 
 ---
-
-**References**:
-
-- [Isolating Code Under Test with Microsoft Fakes](https://msdn.microsoft.com/en-us/library/hh549175.aspx)
-
-
-And also:
-
-- [Markdown Chech and cross character](http://stackoverflow.com/questions/712132/in-html-i-can-make-a-checkmark-with-x2713-is-there-a-corresponding-x-mark)
+经过上面的介绍，相比大家已经对surge的功能有了比较详细的了解，打开配置文件中，大部分的配置行都和我们之前介绍的界面相关，语法很容易理解。也希望大家多多分享自己的配置文件，服务于大家。
 
 ---
 
