@@ -134,6 +134,6 @@ NDSPod的域名解析服务中，提供根据线路进行不同的路由的功�
 
 {% raw %}
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-Please refer to the auther's name `winterTTr` when you remix, transform, and build upon this material. 
+Please refer to the author's name `winterTTr` when you remix, transform, and build upon this material. 
 {% endraw %}
 本作品由`winterTTr`创作，采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。修改，参照或者转载请注明作者`winterTTr`
