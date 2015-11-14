@@ -57,24 +57,15 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-# scheme: Mist
-
+scheme: Muse
+#scheme: Mist
+#scheme: Pisces
 
 
 
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
-# Sidebar, available value:
-#  - post    expand on posts automatically. Default.
-#  - always  expand for all pages automatically
-#  - hide    expand only when click on the sidebar toggle icon.
-#  - remove  Totally remove sidebar including sidebar toggle icon.
-sidebar: post
-#sidebar: always
-#sidebar: hide
-#sidebar: remove
 
 # Social links
 social:
@@ -98,12 +89,6 @@ social_icons:
 #avatar:
 
 
-# Social links
-# social:
-  #GitHub:
-  #Others:
-
-
 # TOC in the Sidebar
 toc:
   enable: true
@@ -117,6 +102,20 @@ toc:
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 creative_commons: by-nc-sa
 
+sidebar:
+  # Sidebar Position, available value: left | right
+  position: left
+  #position: right
+
+  # Sidebar Display, available value:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle icon.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
 
 
 
@@ -208,6 +207,14 @@ facebook_sdk:
   webmaster:    #true
 
 
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
+
+
 
 
 
@@ -239,4 +246,4 @@ js: js
 images: images
 
 # Theme version
-version: 0.4.5.2
+version: 5.0.0
