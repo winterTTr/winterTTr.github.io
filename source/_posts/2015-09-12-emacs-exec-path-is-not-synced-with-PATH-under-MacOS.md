@@ -3,6 +3,8 @@ date: 2015-09-12 16:33:16
 tags:
   - emacs
   - MacOS
+categories:
+  - emacs
 ---
 
 I do not notice this issue when I try to use the `npm` from emacs eshell.

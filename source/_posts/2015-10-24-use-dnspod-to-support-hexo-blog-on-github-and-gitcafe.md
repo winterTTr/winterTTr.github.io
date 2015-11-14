@@ -10,6 +10,8 @@ tags:
   - baidu
   - baidu爬虫
   - baidu spider
+categories:
+  - internet
 ---
 
 为什么要支持双线路的博客？

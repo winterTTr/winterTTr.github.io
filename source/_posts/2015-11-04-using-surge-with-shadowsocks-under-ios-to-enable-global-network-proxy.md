@@ -7,6 +7,8 @@ tags:
   - tun
 toc_number: false
 sticky: 0
+categories:
+  - internet
 ---
 
 ios上的网络代理一直是我诟病的话题之一。

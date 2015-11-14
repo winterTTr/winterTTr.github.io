@@ -4,6 +4,8 @@ tags:
   - hexo
   - hexo-theme-next
   - github page
+categories:
+  - hexo
 ---
 
 I think the hexo + next theme configuration should be almost done.

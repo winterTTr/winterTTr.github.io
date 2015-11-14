@@ -3,6 +3,8 @@ tags:
   - emacs
   - helm
 date: 2015-10-10 14:07:48
+categories:
+  - emacs
 ---
 
 

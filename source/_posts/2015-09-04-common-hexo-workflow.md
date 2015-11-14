@@ -2,6 +2,8 @@ title: Common Hexo Workflow
 tags:
   - hexo
 date: 2015-09-04 12:30:35
+categories:
+  - hexo
 ---
 
 

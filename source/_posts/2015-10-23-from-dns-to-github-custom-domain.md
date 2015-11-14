@@ -8,6 +8,8 @@ tags:
   - DNS
   - 域名
   - 域名服务器
+categories:
+  - internet
 ---
 
 当我们在github申请一个pages之后，很多人会选择自定义域名，给自己的github pages一个属于自己的名字。

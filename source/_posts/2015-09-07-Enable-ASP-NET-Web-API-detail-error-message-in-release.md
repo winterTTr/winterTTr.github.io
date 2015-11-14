@@ -3,6 +3,8 @@ date: 2015-09-07 16:24:40
 tags:
   - C#
   - ASP.NET
+categories:
+  - ASP.NET
 ---
 
 After deploy the asp.net web api application, I found that when a error (exception) occurs, the return message would only be

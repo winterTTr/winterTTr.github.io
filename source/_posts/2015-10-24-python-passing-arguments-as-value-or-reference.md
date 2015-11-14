@@ -5,6 +5,8 @@ tags:
   - arguments
   - 参数传递
 sticky: 10
+categories:
+  - python
 ---
 
 

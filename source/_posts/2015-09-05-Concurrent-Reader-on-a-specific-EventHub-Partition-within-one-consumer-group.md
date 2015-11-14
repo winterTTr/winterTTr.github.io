@@ -6,6 +6,8 @@ tags:
   - Eventhub
   - Service Bus
   - Consumer Group
+categories:
+  - Azure
 ---
 
 

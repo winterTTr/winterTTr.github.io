@@ -4,6 +4,8 @@ tags:
   - Unit Test
   - Fake
 date: 2015-09-05 10:43:17
+categories:
+  - C#
 ---
 
 In common C# Unit test, we always meet the problem that our final application is depending on many 3rd party or system references. But for unit test, we need to separate and control the dependency libraries behaviour. One of the solution will be `Microsoft Fake`.

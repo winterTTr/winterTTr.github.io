@@ -4,6 +4,8 @@ tags:
   - git
   - git-submodule
   - git-subtree
+categories:
+  - git
 ---
 
 My emacs is mainly using `git submodule` to organise the packages. I do not use any package management for my emacs currently. But recently, i lose the `evil` package git repository access. That makes me to really the potential issue about `git-submodule`. Meanwhile, I found the `git-subtree`, so i decide to move all my packages from `git-submodule` to `git-subtree`.

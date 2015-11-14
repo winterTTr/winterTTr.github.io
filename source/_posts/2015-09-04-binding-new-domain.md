@@ -4,6 +4,8 @@ tags:
   - github page
   - custom domain
   - godaddy
+categories:
+  - internet
 ---
 
 

@@ -6,6 +6,8 @@ tags:
   - hexo
   - tag plugin
   - Nunjucks
+categories:
+  - hexo
 ---
 
 When I use the hexo tag plugin, i found that I cannot use space within the parameter of a tag plugin, even I wrap the parameter with double quote. This confuses me a lot.
