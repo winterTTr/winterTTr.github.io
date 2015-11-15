@@ -3,6 +3,7 @@ date: {{ date }}
 tags:
 sticky: 0
 toc_number: false
+categories:
 ---
 
 Digest here

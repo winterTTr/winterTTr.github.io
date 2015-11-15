@@ -1,13 +1,19 @@
-title: {{ title }}
-tags:
+title: talk about oauth on azure active directory
 sticky: 0
 toc_number: false
+tags:
+ - active directory
+ - azure
+ - oauth
 categories:
+  - azure
 ---
 
 
 <!--more-->
 
+
+# will the token pass through browser?
 
 
 ## Title1
@@ -76,7 +82,15 @@ content
 
 **References**:
 
-- [Isolating Code Under Test with Microsoft Fakes](https://msdn.microsoft.com/en-us/library/hh549175.aspx)
+- [OAuth 2.0 in Azure AD](https://msdn.microsoft.com/en-us/library/hh549175.aspx)
+- [OAuth and Single Page JavaScript Web-Apps](http://alexbilbie.com/2014/11/oauth-and-javascript/)
+- [OAuth 2: Server & Client-Side Flow](https://developer.yammer.com/docs/oauth-2)
+- [What's a redirect URI? how does it apply to iOS app for OAuth2.0?](http://stackoverflow.com/questions/13281084/whats-a-redirect-uri-how-does-it-apply-to-ios-app-for-oauth2-0)
+- [How does OAuth 2.0 work?](https://www.quora.com/How-does-OAuth-2-0-work)
+- [Web API Authorization Guide](https://developer.spotify.com/web-api/authorization-guide/#authorization_code_flow)
+- [Using OAuth 2.0 from a Web Application with Authorization Code Flow](http://wiki.scn.sap.com/wiki/display/Security/Using+OAuth+2.0+from+a+Web+Application+with+Authorization+Code+Flow)
+- [API Gateway OAuth 2.0 Authentication Flows](https://docs.oracle.com/cd/E39820_01/doc.11121/gateway_docs/content/oauth_flows.html)
+
 
 
 And also:
