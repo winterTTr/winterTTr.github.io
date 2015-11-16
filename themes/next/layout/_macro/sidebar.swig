@@ -39,12 +39,16 @@
             </a>
           </div>
 
+          <div class="site-state-seperator"></div>
+
           <div class="site-state-item site-state-categories">
             {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
               <span class="site-state-item-count">{{ site.categories.length }}</span>
               <span class="site-state-item-name">{{ __('state.categories') }}</span>
               {% if theme.menu.categories %}</a>{% endif %}
           </div>
+
+          <div class="site-state-seperator"></div>
 
           <div class="site-state-item site-state-tags">
             {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
