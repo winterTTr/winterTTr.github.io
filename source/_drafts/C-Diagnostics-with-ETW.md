@@ -70,6 +70,8 @@ Each keyword value is a 64-bit integer, which is treated as a bit array (a few o
 - [ETW in C#: Controlling which events get logged in an System.Diagnostics.Tracing.EventSource](http://blogs.msdn.com/b/vancem/archive/2012/08/14/etw-in-c-controlling-which-events-get-logged-in-an-system-diagnostics-tracing-eventsource.aspx)
 - [Cloud Diagnostics - Take Control of Logging and Tracing in Windows Azure](https://msdn.microsoft.com/magazine/ff714589.aspx)
 - [Vance Morrison's Weblog](http://blogs.msdn.com/b/vancem/)
+- [HOW ARE EVENT PARAMETERS BEST USED TO CREATE AN INTUITIVE CUSTOM EVENTSOURCETRACE](http://blogs.msmvps.com/kathleen/2014/01/24/how-are-event-parameters-best-used-to-create-an-intuitive-custom-evnetsourcetrace/)
+- [Using .NET 4.5.1, how do I use some of the non-intuitive properties provided by ETW?](http://stackoverflow.com/questions/21292547/using-net-4-5-1-how-do-i-use-some-of-the-non-intuitive-properties-provided-by)
 
 
 And also:
