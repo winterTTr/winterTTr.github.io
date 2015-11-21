@@ -5,6 +5,8 @@ tags:
 
 <!--more-->
 
+> typeperf -q -o "C:\Temp\counters.txt"
+
 
 The **Event** attribute includes the event identifier as its first parameter. Every other parameter in this attribute is optional; the only required parameter is the event identifier
 
@@ -73,7 +75,11 @@ Each keyword value is a 64-bit integer, which is treated as a bit array (a few o
 - [HOW ARE EVENT PARAMETERS BEST USED TO CREATE AN INTUITIVE CUSTOM EVENTSOURCETRACE](http://blogs.msmvps.com/kathleen/2014/01/24/how-are-event-parameters-best-used-to-create-an-intuitive-custom-evnetsourcetrace/)
 - [Using .NET 4.5.1, how do I use some of the non-intuitive properties provided by ETW?](http://stackoverflow.com/questions/21292547/using-net-4-5-1-how-do-i-use-some-of-the-non-intuitive-properties-provided-by)
 
+Read more:
+- [About Event Tracing](https://msdn.microsoft.com/en-us/library/windows/desktop/aa363668(v=vs.85).aspx)
+- [Vance Morrison's Weblog](http://blogs.msdn.com/b/vancem/)
+- [Semantic Logging 2.0](https://msdn.microsoft.com/en-us/library/dn775006.aspx)
+- [Developing event sources using the .NET EventSource class](https://msdn.microsoft.com/en-us/library/dn774985(v=pandp.20).aspx)
+- [Azure Table Storage event sink](https://msdn.microsoft.com/en-us/library/dn775010(v=pandp.20).aspx)
+- [Microsoft Azure Diagnostics](http://justazure.com/microsoft-azure-diagnostics-part-4-custom-logging-components-azure-diagnostics-1-3-changes/)
 
-And also:
-
-- [Markdown Chech and cross character](http://stackoverflow.com/questions/712132/in-html-i-can-make-a-checkmark-with-x2713-is-there-a-corresponding-x-mark)
