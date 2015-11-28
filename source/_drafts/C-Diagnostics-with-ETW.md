@@ -3,6 +3,8 @@ tags:
 ---
 
 
+
+
 <!--more-->
 
 > typeperf -q -o "C:\Temp\counters.txt"
@@ -58,6 +60,11 @@ Each keyword value is a 64-bit integer, which is treated as a bit array (a few o
 
 ## Title2
 
+
+# Q&A
+
+## Sometimes the ETW log do not transfer to the local storage table
+MonAgent.exe cannot be started by MonAgentHost.exe.
 
 
 
