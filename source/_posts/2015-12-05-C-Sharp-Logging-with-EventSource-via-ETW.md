@@ -1,11 +1,33 @@
-title: 'C# Diagnostics with ETW'
+title: 'C# Logging with EventSource via ETW'
 tags:
+  - ETW
+  - Logging
+  - EventSource
+  - 'C#'
+sticky: 0
+toc_number: false
+categories:
+  - 'C#'
+date: 2015-12-05 22:36:07
 ---
 
 
+Logging is the always a fundamental diagnostics capacity that we could leverage to debug our program. Comparing to the traditional `printf` style logging, C# have already built in a great logging capacity which we could use as more modern and structured logging way. That is `EventSource`, which use `ETW` (Event Tracing for Windows) as underlying technical. And we will talk about logging with `EventSource` in this article.
 
 
 <!--more-->
+
+# What is ETW?
+
+{% blockquote "MSDN" "https://msdn.microsoft.com/en-us/library/windows/hardware/ff545699(v=vs.85).aspx" "Link"  %}
+Event Tracing for Windows (ETW) provides a mechanism to trace and log events that are raised by user-mode applications and kernel-mode drivers. ETW is implemented in the Windows operating system and provides developers a fast, reliable, and versatile set of event tracing features.
+{% endblockquote %}
+
+As the documentation said, `ETW` is a windows system built-in feature, which provides the logging abiblity with good performance. From Windows 7 and later operating systems, `ETW` is a high-speed tracing facility that uses kernel buffering and logging to provide a tracing mechanism for events that are raised by both user-mode applications and kernel-mode device drivers. These events are traced and logged via an ETW Session.
+
+# strong-typed logging
+
+
 
 > typeperf -q -o "C:\Temp\counters.txt"
 
@@ -59,6 +81,65 @@ Each keyword value is a 64-bit integer, which is treated as a bit array (a few o
 
 
 ## Title2
+
+
+
+
+# sample code
+
+- qiniu picture
+{% qnimg test/demo.png title:title alt:description %}
+{% qnimg test/demo.png title:title alt:description extend:-watermark.black %}
+
+- quote
+{% blockquote [author[, source]] [link] [source_link_title] %}
+content
+{% endblockquote %}
+
+- Code Block
+{% codeblock [title] [lang:language] [url] [link text] %}
+code snippet
+{% endcodeblock %}
+
+- jsFiddle
+{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
+
+- Gist
+{% gist gist_id [filename] %}
+
+- Link
+{% link text url [external] [title] %}
+
+- Include Code
+{% include_code [title] [lang:language] path/to/file %}
+
+
+- YouTube
+{% youtube video_id %}
+
+- Vimeo
+{% vimeo video_id %}
+
+- Include Posts
+{% post_path slug %}
+{% post_link slug [title] %}
+
+
+- Include Assets
+{% asset_path slug %}
+{% asset_img slug [title] %}
+{% asset_link slug [title] %}
+
+
+- Raw
+{% raw %}
+content
+{% endraw %}
+
+
+
+
+
 
 
 # Q&A
