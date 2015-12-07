@@ -19,14 +19,63 @@ Logging is the always a fundamental diagnostics capacity that we could leverage 
 
 # What is ETW?
 
+Before we have any discusion about `EventSource`, let's have a glance about what is `ETW`.
+Here is some defination from MSDN about `ETW`:
+
 {% blockquote "MSDN" "https://msdn.microsoft.com/en-us/library/windows/hardware/ff545699(v=vs.85).aspx" "Link"  %}
 Event Tracing for Windows (ETW) provides a mechanism to trace and log events that are raised by user-mode applications and kernel-mode drivers. ETW is implemented in the Windows operating system and provides developers a fast, reliable, and versatile set of event tracing features.
 {% endblockquote %}
 
-As the documentation said, `ETW` is a windows system built-in feature, which provides the logging abiblity with good performance. From Windows 7 and later operating systems, `ETW` is a high-speed tracing facility that uses kernel buffering and logging to provide a tracing mechanism for events that are raised by both user-mode applications and kernel-mode device drivers. These events are traced and logged via an ETW Session.
+Another one:
 
-# strong-typed logging
+{% blockquote "MSDN Blog" "http://blogs.msdn.com/b/ntdebugging/archive/2009/08/27/etw-introduction-and-overview.aspx" "Link"  %}
+Event Tracing for Windows (ETW) is a system and software diagnostic, troubleshooting and performance monitoring component of Windows that has been around since Windows 2000. However, it wasn't until Windows Vista that major components of the OS were updated to heavily use ETW tracing; making it much more practical and useful.
+ETW is useful from a variety of scenarios, including:
+ -User & Admin: Being in control of your system and knowing what is going on. 
+ -User & Admin: Troubleshooting performance, hardware and OS issues.
+ -Enthusiast: Learning further about the OS and the low level guts of the OS.
+ -Software Developer/ISV/OEM: Investigating issues with your software's interaction with Microsoft OS & technologies
+ -Hardware Developer/IHV/OEM: Investigating issues with hardware interaction with the OS, including kernel, driver subsystems, up to the user stack.
+ETW is a set of technologies and tools that can absolutely complement existing tools while providing a look into the guts of the OS at a very low level.
+{% endblockquote %}
 
+Here is a good summary:
+
+{% blockquote "MSDN Blog" "http://blogs.msdn.com/b/oanapl/archive/2009/08/05/etw-event-tracing-for-windows-what-it-is-and-useful-tools.aspx" "Link"  %}
+A general-purpose, high-speed tracing facility provided by the operating system. Using a buffering and logging mechanism implemented in the kernel, ETW provides a tracing mechanism for events raised by both user-mode applications and kernel-mode device drivers. Additionally, ETW gives you the ability to enable and disable logging dynamically, making it easy to perform detailed tracing in production environments without requiring reboots or application restarts. The logging mechanism uses per-processor buffers that are written to disk by an asynchronous writer thread. This allows large-scale server applications to write events with minimum disturbance.
+{% endblockquote %}
+
+
+So based on those definiation from msdn, `ETW` is a Windows operation system build-in feature. It provides a logging ability with good performance both for user application and kernel-mode device drivers. 
+
+
+# What is EventSource?
+
+Also from MSDN:
+
+{% blockquote "MSDN - EventSource Class" "https://msdn.microsoft.com/en-us/library/system.diagnostics.tracing.eventsource(v=vs.110).aspx" "Link"  %}
+This class is intended to be inherited by a user class that provides specific events to be used for ETW.
+{% endblockquote %}
+
+Yes, simple and direct, `EventSource` is the entry point from where we can start to use the ablitity that provided by underlying ETW. And in this article, we will talk about more some detail about how we use `EventSource` as well as potential point we need to pay attention to.
+
+
+# Why ETW?
+Before we talk about what `EventSource` can provide to us, let's simple discuss why we prefer `EventSource` comparing traditional `printf` style logging.
+
+In fact, we have two categories of logging system:
+
+- **weakly typed logging**
+This logging is the traditonal `printf` style logging. The logging system only knows the how to log string and thus all the data is formatted into a final string before pass to the logging system. It is simple and direct, also most of the logging framework support this kind of logging system.
+
+- **strong typed Logging (also know as `Semantic Logging`)**
+In such kind of logging system, every logging item is not a simple string. Instead, it is a data set with schema defined. So we can fetch every field of the logging item back when we need. Here, we call those logging items as `event`. And usually, every event will have some common fields, such as `event name`, `event id`, `timestamp` and etc, plus some extra user-defined fields, which we called `payload`. So every event will have a `common fields` + `payload fields`.
+
+The most important difference between `weakly typed logging` and `strong typed logging` is how the consumer process the logging data. `weakly typed logging` need to format the pieces of information into string and when we need those information, we need to write another parser to parse those information back to pieces. This is no effecient at all. And especially, if the author of the parser is not the author of original logging string, the parser usually need to *guess* what those information is, so this makes the parser every fragile. And usually the `weak typed logging` is comsumed by human as we can easily understand it. But that is totally not true for for any automation process tools. And all of those issues can be properly handled by `string typed logging`. 
+
+`ETW` built into the windows system is just an good example of `strong typed logging` system.
+
+# How to use EventSource
 
 
 > typeperf -q -o "C:\Temp\counters.txt"
