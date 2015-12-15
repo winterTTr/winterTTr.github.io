@@ -1,4 +1,4 @@
-title: Claims Ideneity in ASP.NET authentication Middleware
+title: Claims Identity in ASP.NET authentication Middleware
 sticky: 0
 toc_number: false
 date: 2015-12-12 21:10:14
@@ -24,7 +24,7 @@ In this article we will talk about some detail about asp.net authentication midd
 <!--more-->
 
 # Owin Middleware
-Simple spearking, Owin pipeline is a link of middleware, and the request will dive into this link to the end(or short-circuited before end), and the response will pop up back though the pipeline middleware. When coming through the middleware, this gives opportunity to middleware to process and even short-circuit the whole process line.
+Simple speaking, Owin pipeline is a link of middleware, and the request will dive into this link to the end(or short-circuited before end), and the response will pop up back though the pipeline middleware. When coming through the middleware, this gives opportunity to middleware to process and even short-circuit the whole process line.
 
 
     Request
@@ -35,7 +35,7 @@ Simple spearking, Owin pipeline is a link of middleware, and the request will di
            \=====/        \=====/        \=====/
     
 This diagram is a very simple and straightforward explanation about the Owin Middleware.
-And authentication middleware if one kind of middleware that will give their effect to the request and respnose process.
+And authentication middleware if one kind of middleware that will give their effect to the request and response process.
 
 {% codeblock OwinMiddleware lang:csharp https://github.com/yreynhout/katana-clone/blob/ac4f4f48a3c56221faa554995d8b8c1940b5f838/src/Microsoft.Owin/OwinMiddleware.cs OwinMiddleware.cs %}
 using System.Threading.Tasks;
@@ -106,7 +106,7 @@ However, the thing is not as I wish.
 Here is the expanded version for `CookieAuthenticationHandler`:
 {% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/teardown.png" "title:TeardownAsync" %}
 
-The `TeardownAsync` will perform the persistence logic from the idenity, but not like we wish. From the diagram, we found that findally, the `CookieAuthenticationHandler` use the `ApplyResponseGrantAsync` to save information. And what is `Grant`?
+The `TeardownAsync` will perform the persistence logic from the identity, but not like we wish. From the diagram, we found that findally, the `CookieAuthenticationHandler` use the `ApplyResponseGrantAsync` to save information. And what is `Grant`?
 
 We can refer to more detail from the implementation:
 {% codeblock CookieAuthenticationHandler lang:csharp https://github.com/yreynhout/katana-clone/blob/ac4f4f48a3c56221faa554995d8b8c1940b5f838/src/Microsoft.Owin.Security.Cookies/CookieAuthenticationHandler.cs#L81 CookieAuthenticationHandler.cs %}
