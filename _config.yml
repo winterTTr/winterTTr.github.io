@@ -1,134 +1,245 @@
-# Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
 
-# Site
-title: Life & Note - winterTTr
-subtitle: winterTTr's Blog
-description: Memo down pieces of Life
-author: winterTTr
-language: en
-timezone:
-avatar: /images/avatar.jpg
-since: 2015
+# Place your favicon.ico to /source directory.
+favicon: /favicon.ico
 
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://winterTTr.me
-root: /
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+# Set default keywords (Use a comma to separate)
+keywords: "Hexo, NexT"
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-  - baidu_verify_F0n02D9Rhz.html
-  - a23372d1a05807743aa8bd094cc75e38.txt
-  - sogousiteverification.txt.html
-  - static/**/*
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
 
-# Writing
-new_post_name: :year-:month-:day-:title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-highlight:
+# Specify the date when the site was setup
+#since: 2015
+
+
+
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running hexo in a subdirectory (e.g. domain.tld/blog)
+# Remove leading slashes ( "/archives" -> "archives" )
+menu:
+  home: /
+  #categories: /categories
+  #about: /about
+  archives: /archives
+  tags: /tags
+  #commonweal: /404.html
+
+
+# Enable/Disable menu icons.
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of menu item and value is the name of FontAwsome icon.
+#   When an question mask icon presenting up means that the item has no mapping icon.
+menu_icons:
   enable: true
-  line_number: true
-  auto_detect: true
-  tab_replace:
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
-
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: next
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
-deploy:
-- type: git
-  repo:
-    github: https://github.com/winterTTr/winterTTr.github.io.git
-    gitcafe: https://gitcafe.com/winterTTr/winterTTr.git
-- type: rsync
-  host: ubuntu-ea.cloudapp.net
-  user: rsync
-  root: /var/www/html
-  port: 22
-  delete: true
-  verbose: true
+  # Icon Mapping.
+  home: home
+  about: user
+  categories: th
+  tags: tags
+  archives: archive
+  commonweal: heartbeat
 
 
-# rss
-feed:
-  type: atom
-  path: atom.xml
-  limit: 0
-
-# friend link
-links_title: Favorate Links
-
-links:
-  少数派: http://sspai.com
-  Master Emacs: https://www.masteringemacs.org/
 
 
-# site map
-sitemap:
-  path: sitemap.xml
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
+
+# Schemes
+scheme: Muse
+#scheme: Mist
+#scheme: Pisces
 
 
-# plugins
-plugins:
-  - hexo-qiniu-sync
 
-# Qiniu Config
-qiniu:
-  offline: false
-  sync: true
-  bucket: winterttr-github-io
-  access_key: 8k5DN11zjqRdx7TgHS0S7R9RoCnxaQzSpV8ptBqy
-  secret_key: 4hJy9NbPpzM4iY9xtLDjxKuZjV4tOyob4OdQIOLU
-  dirPrefix: static
-  urlPrefix: http://7xljtv.com1.z0.glb.clouddn.com/static
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: images
-    extend: -watermark
-  js:
-    folder: js
-  css:
-    folder: css
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
 
-# baidu sitemap
-baidusitemap:
-  path: baidusitemap.xml
+
+# Social links
+# social:
+  #GitHub:
+  #Others:
+
+# Social Icons
+social_icons:
+  enable: true
+  # Icon Mappings
+  GitHub: github
+  Twitter: twitter
+  Weibo: weibo
+
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.jpg
+# in site  directory(source/uploads): /uploads/avatar.jpg
+# default : /images/default_avatar.jpg
+#avatar:
+
+
+# TOC in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: true
+
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+#creative_commons: by-nc-sa
+#creative_commons:
+
+sidebar:
+  # Sidebar Position, available value: left | right
+  position: left
+  #position: right
+
+  # Sidebar Display, available value:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle icon.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
+
+
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: false
+  image:
+
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically Excerpt
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Use Lato font
+use_font_lato: true
+
+
+
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# ---------------------------------------------------------------
+
+# MathJax Support
+mathjax:
+
+
+# Swiftype Search API Key
+#swiftype_key:
+
+# Baidu Analytics ID
+#baidu_analytics:
+
+# Duoshuo ShortName
+#duoshuo_shortname:
+
+# Disqus
+#disqus_shortname:
+
+# Share
+#jiathis:
+
+# Share
+#duoshuo_share: true
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+#google_site_verification:
+
+
+# Google Analytics
+#google_analytics:
+
+
+# Make duoshuo show UA
+# user_id must NOT be null when admin_enable is true!
+# you can visit http://dev.duoshuo.com get duoshuo user id.
+duoshuo_info:
+  ua_enable: true
+  admin_enable: false
+  user_id: 0
+  #admin_nickname: ROOT
+
+
+# Facebook SDK Support.
+# https://github.com/iissnan/hexo-theme-next/pull/410
+facebook_sdk:
+  enable: false
+  app_id:       #<app_id>
+  fb_admin:     #<user_id>
+  like_button:  #true
+  webmaster:    #true
+
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
+
+
+# Tencent analytics ID
+# tencent_analytics:
+
+
+
+
+
+
+#! ---------------------------------------------------------------
+#! DO NOT EDIT THE FOLLOWING SETTINGS
+#! UNLESS YOU KNOW WHAT YOU ARE DOING
+#! ---------------------------------------------------------------
+
+# Motion
+use_motion: true
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: vendors
+css: css
+js: js
+images: images
+
+# Theme version
+version: 0.5.0

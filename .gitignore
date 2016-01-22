@@ -1,8 +1,14 @@
 .DS_Store
-Thumbs.db
-db.json
+.idea/
 *.log
 node_modules/
-public/
-static
-.deploy*/
+
+# Ignore unused verdors' files
+source/vendors/fancybox/*
+!source/vendors/fancybox/source/
+
+source/vendors/font-awesome/less/
+source/vendors/font-awesome/scss/
+
+source/vendors/ua-parser-js/*
+!source/vendors/ua-parser-js/dist/
