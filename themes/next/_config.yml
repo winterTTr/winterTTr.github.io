@@ -27,10 +27,10 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  categories: /categories
+  #categories: /categories
+  #about: /about
   archives: /archives
   tags: /tags
-  about: /about
   #commonweal: /404.html
 
 
@@ -57,9 +57,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Muse
+scheme: Muse
 #scheme: Mist
-scheme: Pisces
+#scheme: Pisces
 
 
 
@@ -67,14 +67,11 @@ scheme: Pisces
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Social links
-social:
-  github: https://github.com/winterTTr
-  twitter: https://twitter.com/winterTTr
-  weibo: http://weibo.com/winterTTr
-  douban: http://douban.com/people/winterTTr
-  zhihu: http://www.zhihu.com/people/winterTTr
 
+# Social links
+# social:
+  #GitHub:
+  #Others:
 
 # Social Icons
 social_icons:
@@ -86,6 +83,9 @@ social_icons:
 
 
 # Sidebar Avatar
+# in theme directory(source/images): /images/avatar.jpg
+# in site  directory(source/uploads): /uploads/avatar.jpg
+# default : /images/default_avatar.jpg
 #avatar:
 
 
@@ -94,13 +94,14 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: false
+  number: true
 
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons: by-nc-sa
+#creative_commons: by-nc-sa
+#creative_commons:
 
 sidebar:
   # Sidebar Position, available value: left | right
@@ -210,22 +211,17 @@ facebook_sdk:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: enable
-  app_id: WK0MG0KyIjCmTQQtCU3Fqx5A
-  app_key: uiAElW6J3hMrmwqoatM9drkx
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
+
+
+# Tencent analytics ID
+# tencent_analytics:
 
 
 
 
-
-# SEO and sharing
-disqus_shortname: winterTTr
-google_analytics: UA-67136287-1
-baidu_analytics: 12217b6eff7690192f4e4469013eee76
-google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
-
-# Swift insite search
-swiftype_key: WRpxR8GrCr4jNe6LcLyU
 
 
 #! ---------------------------------------------------------------
@@ -246,4 +242,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.0.0
+version: 0.5.0
