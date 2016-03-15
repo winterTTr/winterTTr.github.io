@@ -163,8 +163,15 @@ baidu_analytics: 12217b6eff7690192f4e4469013eee76
 # Disqus
 disqus_shortname: winterTTr
 
+# Baidu Share
+# Available value:
+#    button | slide
+#baidushare:
+##  type: button
+
 # Share
-jiathis: true
+#jiathis:
+#add_this_id:
 
 # Share
 #duoshuo_share: true
@@ -176,6 +183,9 @@ google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
 
 # Google Analytics
 google_analytics: UA-67136287-1
+
+# CNZZ count
+#cnzz_siteid:
 
 
 # Make duoshuo show UA

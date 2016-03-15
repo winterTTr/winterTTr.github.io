@@ -39,23 +39,23 @@
             </a>
           </div>
 
-          <div class="site-state-seperator"></div>
-
-          <div class="site-state-item site-state-categories">
-            {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.categories.length }}</span>
-              <span class="site-state-item-name">{{ __('state.categories') }}</span>
+          {% if site.categories.length > 0 %}
+            <div class="site-state-item site-state-categories">
+              {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
+                <span class="site-state-item-count">{{ site.categories.length }}</span>
+                <span class="site-state-item-name">{{ __('state.categories') }}</span>
               {% if theme.menu.categories %}</a>{% endif %}
-          </div>
+            </div>
+          {% endif %}
 
-          <div class="site-state-seperator"></div>
-
-          <div class="site-state-item site-state-tags">
-            {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.tags.length }}</span>
-              <span class="site-state-item-name">{{ __('state.tags') }}</span>
+          {% if site.tags.length > 0 %}
+            <div class="site-state-item site-state-tags">
+              {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
+                <span class="site-state-item-count">{{ site.tags.length }}</span>
+                <span class="site-state-item-name">{{ __('state.tags') }}</span>
               {% if theme.menu.tags %}</a>{% endif %}
-          </div>
+            </div>
+          {% endif %}
 
         </nav>
 
@@ -91,14 +91,17 @@
           </div>
         {% endif %}
 
-        <div class="links-of-author motion-element">
+        {# Blogroll #}
+        <div class="links-of-blogroll motion-element">
           {% if theme.links %}
-            <p class="site-author-name">{{ theme.links_title }}</p>
-            {% for name, link in theme.links %}
-              <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">{{ name }}</a>
-              </span>
-            {% endfor %}
+            <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
+            <ul class="links-of-blogroll-list">
+              {% for name, link in theme.links %}
+                <li class="links-of-blogroll-item">
+                  <a href="{{ link }}" target="_blank">{{ name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
         </div>
 
