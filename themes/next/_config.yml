@@ -220,56 +220,8 @@ auto_excerpt:
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
-
-# Swiftype Search API Key
-swiftype_key: WRpxR8GrCr4jNe6LcLyU
-
-# Baidu Analytics ID
-baidu_analytics: 12217b6eff7690192f4e4469013eee76
-
-# Duoshuo ShortName
-#duoshuo_shortname:
-
-# Disqus
-disqus_shortname: winterTTr
-
-# Baidu Share
-# Available value:
-#    button | slide
-#baidushare:
-##  type: button
-
-# Share
-#jiathis:
-#add_this_id:
-
-# Share
-#duoshuo_share: true
-
-# Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters/
-google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
-
-
-# Google Analytics
-google_analytics: UA-67136287-1
-
-# CNZZ count
-#cnzz_siteid:
-
-
-# Make duoshuo show UA
-# user_id must NOT be null when admin_enable is true!
-# you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
-
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
