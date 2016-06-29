@@ -30,7 +30,6 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-
   categories: /categories
   archives: /archives
   tags: /tags
@@ -45,7 +44,6 @@ menu:
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
   categories: th
@@ -61,10 +59,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-
 #scheme: Muse
 #scheme: Mist
-
 scheme: Pisces
 
 
@@ -119,6 +115,12 @@ font:
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
+sidebar:
+  position: left
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
 
 
 
@@ -138,8 +140,6 @@ social:
 #   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
-  # Icon Mappings.
-  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
   Weibo: weibo
@@ -163,9 +163,6 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-  #display: always
-  #display: hide
-  #display: remove
 
 
 # Blogrolls
@@ -321,6 +318,17 @@ tencent_analytics: 54243739
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
+
+
+# ---------------------------------------------------------------
+# Reward comment
+# ---------------------------------------------------------------
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /images/weixin.jpg
+alipay: /images/alipay.jpg
+
+
+
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
