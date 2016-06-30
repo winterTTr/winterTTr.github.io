@@ -106,10 +106,6 @@ sitemap:
   path: sitemap.xml
 
 
-# plugins
-plugins:
-  - hexo-qiniu-sync
-
 # Qiniu Config
 qiniu:
   offline: false
