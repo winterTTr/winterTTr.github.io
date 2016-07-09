@@ -61,7 +61,7 @@ Here is the definition the `OwinMiddleware`, there is two key pieces in code:
 
 # AuthenticationMiddleware
 `AuthenticationMiddleware` is the base class for all authentication middleware. And it implement the basic pattern for the `Invoke` function for a concrete authentication middleware. Here is the flow:
-{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/cookie authentication middleware invoke.png" "title:CookieAuthenticationMiddleware" %}
+{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/cookie_authentication_middleware_invoke.jpg" "title:CookieAuthenticationMiddleware" %}
 
 And more detail code is as below:
 {% codeblock AuthenticationMiddleware lang:csharp https://github.com/yreynhout/katana-clone/blob/ac4f4f48a3c56221faa554995d8b8c1940b5f838/src/Microsoft.Owin.Security/Infrastructure/AuthenticationMiddleware.cs AuthenticationMiddleware.cs %}
@@ -91,7 +91,7 @@ protected override AuthenticationHandler<CookieAuthenticationOptions> CreateHand
 # AuthenticationHandler
 So the main logic of authentication middleware will be focus on authentication handler. Let see a deeper graph when we expand the `AuthenticationHandler` level:
 
-{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/authentication handler.png" "title:AuthenticationHandler" %}
+{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/authentication_handler.jpg" "title:AuthenticationHandler" %}
 
 The blue part will be the main part of how `AuthenticationHandler` works. And the red part will be how a specific authentication handler, here is `CookieAuthenticationHandler` implemented.
 
@@ -104,7 +104,7 @@ In fact, originally, i thought the claim identity which we can access via `User.
 However, the thing is not as I wish.
 
 Here is the expanded version for `CookieAuthenticationHandler`:
-{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/teardown.png" "title:TeardownAsync" %}
+{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/teardown.jpg" "title:TeardownAsync" %}
 
 The `TeardownAsync` will perform the persistence logic from the identity, but not like we wish. From the diagram, we found that findally, the `CookieAuthenticationHandler` use the `ApplyResponseGrantAsync` to save information. And what is `Grant`?
 
@@ -239,7 +239,7 @@ So based on the implementation of Katana( i do not read the latest code, so corr
 
 Yes, you may say that, how about those that do not belong to so-called "login information", where should I save it? In fact, within asp.net project template the microsoft already provide us the way when you select "Individual Use Account".
 
-{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/individual user account.png" "title:Individual User Account" extend:-watermark.black %}
+{% qnimg "2015-12-12-Claim-Identity-In-AspNet-Authentication-Middleware/individual_user_account.jpg" "title:Individual User Account" %}
 
 I do not want to dive more code here, the magic is `ApplicationUserManager`. This manager is using `UserStore` binding to a entityframework `DbContext` object. We can use the user manager's `AddClaimAsync`|`GetClaimAsync`|`RemoveClaimAsync` to manipulate the claim data we want to save. The user manager will sync those saved claim everytime when the next query is comming, like what we wish. And yes, i think you already guess the conclusion, user manager is using the database to save the claim identity information underlying.
 

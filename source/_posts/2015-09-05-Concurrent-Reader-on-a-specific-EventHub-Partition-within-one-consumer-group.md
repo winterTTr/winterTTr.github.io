@@ -105,7 +105,7 @@ public void Concurrent_Readers_On_1Partition_1ConsumerGroup()
 
 First we create more than 5 reader one a specific partition:
 
-{% qnimg "2015-09-05-Concurrent-Reader-on-a-specific-EventHub-Partition-within-one-consumer-group/exception-more-than-5-reader.png" %}
+{% qnimg "2015-09-05-Concurrent-Reader-on-a-specific-EventHub-Partition-within-one-consumer-group/exception-more-than-5-reader.jpg" %}
 
 We will received the above exception.
 

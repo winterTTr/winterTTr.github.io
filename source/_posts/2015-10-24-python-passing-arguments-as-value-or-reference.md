@@ -50,7 +50,7 @@ lstFoo[0] = 2
 
 如下图所示：
 
-{% qnimg "2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.png" extend:-watermark.black" %}
+{% qnimg "2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg" %}
 
 
 # Python的函数参数传递：传值？引用？

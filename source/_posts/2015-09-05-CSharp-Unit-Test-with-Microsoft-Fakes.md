@@ -27,7 +27,7 @@ Fakes come in two flavours:
 - A `stub` replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components.
 
 A good diagram to distinguish those two:
-{% qnimg "2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/stub-shim-concept-diagram.png" %}
+{% qnimg "2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/stub-shim-concept-diagram.jpg" %}
 
 
 

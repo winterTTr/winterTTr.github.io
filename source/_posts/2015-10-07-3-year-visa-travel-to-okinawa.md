@@ -102,7 +102,7 @@ categories:
 ## 前往【美ら海水族館】
 首先，你要知道，冲绳是个岛，岛上也是分很多个小城市的。
 我们到达的叫`那霸`，在冲绳岛的最南面。我们要去的`美ら海水族館`在`名护市`，在冲绳岛的最北面，所以，我们要穿越整个海岛才可以到达 >_<。
-{% qnimg 2015-10-07-3-year-visa-travel-to-okinawa/google-map-churaumi.jpg extend:?watermark/2/text/aHR0cDovL3dpbnRlclRUci5tZQ==/font/Y29uc29sYXM=/fontsize/520/fill/YmxhY2s= %}
+{% qnimg 2015-10-07-3-year-visa-travel-to-okinawa/google-map-churaumi.jpg %}
 
 这个传说google地图中指出的`Limousine Bus`，就是下面站牌所说的`やんばる急行バス`。
 {% qnimg 2015-10-07-3-year-visa-travel-to-okinawa/express-bus-station.jpg %}

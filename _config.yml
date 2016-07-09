@@ -119,7 +119,7 @@ qiniu:
   update_exist: true
   image: 
     folder: images
-    extend: -watermark
+    extend: 
   js:
     folder: js
   css:

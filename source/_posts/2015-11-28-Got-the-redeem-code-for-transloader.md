@@ -13,7 +13,7 @@ categories:
 竟然中了一枚transloader的兑换码，奖不大但是心情很好~~
 顺便安利一下少数派，文章品质很不错~
 
-{% qnimg "2015-11-28-Got-the-redeem-code-for-transloader/got transloader code.png" extend:-watermark.black %}
+{% qnimg "2015-11-28-Got-the-redeem-code-for-transloader/got_transloader_code.jpg" %}
 
 <!--more-->
 
