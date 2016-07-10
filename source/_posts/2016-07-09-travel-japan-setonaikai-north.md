@@ -1,4 +1,4 @@
-title: 再游日本关西--濑户内海北岸小众游
+title: 再游日本关西--濑户内海北岸小众游（未完结）
 sticky: 0
 toc_number: false
 date: 2016-07-09 19:56:44
@@ -133,68 +133,59 @@ categories:
 可惜展览馆内是不让拍照的，大家有机会可以自行游玩吧
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0503-himejibijutukan-color-pen-2.jpg %}
 
-
----
-# sample code
-
-- qiniu picture
-{% qnimg test/demo.png title:title alt:description %}
-
-- quote
-{% blockquote [author[, source]] [link] [source_link_title] %}
-content
-{% endblockquote %}
-
-- Code Block
-{% codeblock [title] [lang:language] [url] [link text] %}
-code snippet
-{% endcodeblock %}
-
-- jsFiddle
-{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
-
-- Gist
-{% gist gist_id [filename] %}
-
-- Link
-{% link text url [external] [title] %}
-
-- Include Code
-{% include_code [title] [lang:language] path/to/file %}
+# 5月4号 -- 奈良
+{% centerquote %} 奈良（なら）{% endcenterquote %}
+某人说一定要去奈良玩鹿，好吧，于是行程中就多了奈良。
+除了奈良站没走多远，就看到这个奈良鹿的大人偶。这家伙肯定是累了，一屁股靠在了垃圾桶上，当时就把我们笑翻了。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-shika-ningyo.jpg %}
 
 
-- YouTube
-{% youtube video_id %}
-
-- Vimeo
-{% vimeo video_id %}
-
-- Include Posts
-{% post_path slug %}
-{% post_link slug [title] %}
+这个逗逼的正面
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-shika-ningyo-front.jpg %}
 
 
-- Include Assets
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] %}
+想必去过京都周围的，都会去奈良玩吧。相比上次去的时候没有人，这次真是人山人海。直接变成的后果就是，鹿都被喂饱了，根本不吃给的东西。哎，其实还是怀念上次被鹿满世界追着跑的感觉。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-shika.jpg %}
 
 
-- Raw
-{% raw %}
-content
-{% endraw %}
+所以，最后买的鹿饼都为了这群鱼了，比鹿疯狂多了，还好它们不能上岸 >_<
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-fish.jpg %}
+
+
+感觉这次旅行对庭院和植物情有独钟，所以，既然来了春日大社，就顺便来了旁边的万叶植物园。说实话，刚刚去了姬路的好古园，所以，这里的景观明显比好古园的精致度差了很多。所以就当刷景点了，不给大家分享太多照片了。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-tree.jpg %}
+
+
+完了一天，回家，坐着JR回家，车窗中的日落
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-return.jpg %}
+
+
+逛了一天，两人都快饿疯了，吃吃吃，鸡食堂，这名字，不懂日语随便进都行，哈哈
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-kobe-dinner.jpg %}
+
+
+# 5月4号 -- 岡山城
+{% centerquote %} 岡山城（おかやまじょう）{% endcenterquote %}
+
+为何这次要沿着濑户内海游玩呢，当然，最主要的原因还是因为这张票。刚好最近关西地区的旅游局准备了这样的一份旅行票套餐，其中可以自由乘坐岡山、倉敷之间的JR，而且包含了倉敷、岡山所有景点的门票，11000日元，三天的行程。完全符合我们这次旅行的期待。于是我们的濑户内海北岸的主要三天游就围绕这份套餐开始啦
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-ticket.jpg %}
+
+
+所以，第一站就是「岡山」
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-station.jpg %}
+
+
+出了冈山站之后，套餐里面直接包含了冈山站到刚山城的巴士，就是这辆电车。竟然是有轨电车，我竟然是头一次坐有轨电车。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-bus.jpg %}
+
+
+下了电车，基本上步行就可以到所有的景观。当然，在去冈山城路上，我不得不提到这位买东西的小哥！！头一次在日本见到这种类型的叫卖小哥，真的是太会做生意了，看到我们拍了照片，就各种上来和我们搭讪。最后还是盛情难却的买了他的团子（据说是京都的团子。。结果我跑来冈山买，呵呵呵了~）
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-seller.jpg %}
+
 
 ---
 
-**References**:
-
-- [Isolating Code Under Test with Microsoft Fakes](https://msdn.microsoft.com/en-us/library/hh549175.aspx)
-
-
-And also:
-
-- [Markdown Chech and cross character](http://stackoverflow.com/questions/712132/in-html-i-can-make-a-checkmark-with-x2713-is-there-a-corresponding-x-mark)
+*未完待续~~~*
 
 ---
 
