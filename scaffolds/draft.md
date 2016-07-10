@@ -69,6 +69,25 @@ content
 {% endraw %}
 
 
+- Center align text (Next theme plugin)
+<blockquote class="blockquote-center">blah blah blah</blockquote>
+{% centerquote %}blah blah blah{% endcenterquote %}
+{% cq %} blah blah blah {% endcq %}
+
+- Image exceed container (Next theme plugin)
+`img 添加属性 class="full-image"即可`
+
+<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 -->
+<!-- 其中 class="full-image" 是必须的 -->
+<img src="/image-url" class="full-image" />
+
+    <!-- 标签 方式，要求版本在0.4.5或以上 -->
+{% fullimage /image-url, alt, title %}
+
+<!-- 别名 -->
+{% fi /image-url, alt, title %}
+
+
 
 
 
