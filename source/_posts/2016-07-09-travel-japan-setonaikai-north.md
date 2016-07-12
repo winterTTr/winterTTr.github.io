@@ -101,6 +101,7 @@ categories:
 终于明白，日本也有那种日本人人满为患的景点，姬路城就是个明显的情况。周围的外国旅游者并不多，但是，一片一片的日本大爷大妈，哈哈。所以，登上姬路城游览这条就放弃了。因为要等一个小时排队，对于一个已经去过大阪天守阁的人来说，并没有那么多吸引力再上一次姬路城。倒是姬路城周围的场地非常心旷神怡。
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0503-himeji-city-out.jpg %}
 
+---
 # 5月3日 -- 好古園
 {% centerquote %} 姫路城西御屋敷跡庭園好古園（こうこえん）　{% endcenterquote %}
 
@@ -118,6 +119,7 @@ categories:
 日本的庭院技能真是让人惊叹，如果说中国的庭院是真正的大片景色。日本的就是在小地方做出的精致。下面这个荷花不是在一个荷花池里，而是在一个像花坛大小的人造区域中种植的。
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0503-himejiniwa-hehua.jpg %}
 
+---
 # 5月3日 -- 姬路市立美术馆
 {% centerquote %} 姫路市立美術館（ひめじびしりつじゅつかん）　{% endcenterquote %}
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0503-himejibijutukan-gate-2.jpg %}
@@ -133,9 +135,10 @@ categories:
 可惜展览馆内是不让拍照的，大家有机会可以自行游玩吧
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0503-himejibijutukan-color-pen-2.jpg %}
 
+---
 # 5月4号 -- 奈良
 {% centerquote %} 奈良（なら）{% endcenterquote %}
-某人说一定要去奈良玩鹿，好吧，于是行程中就多了奈良。
+女王大人说一定要去奈良玩鹿，好吧，于是行程中就多了奈良。
 除了奈良站没走多远，就看到这个奈良鹿的大人偶。这家伙肯定是累了，一屁股靠在了垃圾桶上，当时就把我们笑翻了。
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-nara-shika-ningyo.jpg %}
 
@@ -163,8 +166,8 @@ categories:
 逛了一天，两人都快饿疯了，吃吃吃，鸡食堂，这名字，不懂日语随便进都行，哈哈
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0504-kobe-dinner.jpg %}
 
-
-# 5月4号 -- 岡山城
+---
+# 5月5号 -- 岡山城
 {% centerquote %} 岡山城（おかやまじょう）{% endcenterquote %}
 
 为何这次要沿着濑户内海游玩呢，当然，最主要的原因还是因为这张票。刚好最近关西地区的旅游局准备了这样的一份旅行票套餐，其中可以自由乘坐岡山、倉敷之间的JR，而且包含了倉敷、岡山所有景点的门票，11000日元，三天的行程。完全符合我们这次旅行的期待。于是我们的濑户内海北岸的主要三天游就围绕这份套餐开始啦
@@ -182,6 +185,92 @@ categories:
 下了电车，基本上步行就可以到所有的景观。当然，在去冈山城路上，我不得不提到这位买东西的小哥！！头一次在日本见到这种类型的叫卖小哥，真的是太会做生意了，看到我们拍了照片，就各种上来和我们搭讪。最后还是盛情难却的买了他的团子（据说是京都的团子。。结果我跑来冈山买，呵呵呵了~）
 {% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-seller.jpg %}
 
+毕竟去过大阪天守阁，也去过姬路城，比起前两位的宏伟，冈山城可以说更加迷你。基本上大家都是一个格局，一个风格。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-city.jpg %}
+
+里面的各种装饰很有意思，让我各种想起火影忍者的画面
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-yin.jpg %}
+
+
+逛完了冈山城，河对面就是下一站，冈山后乐园
+
+---
+# 5月5日 -- 岡山後楽園
+{% centerquote %} 岡山後楽園（おかやまこうらくえん）{% endcenterquote %}
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-gorakuen.jpg %}
+
+
+冈山后乐园感觉像是一个公园式的庭院，面积比普通的日本庭院大了很多，而且，有非常多的宽阔的地域。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-gorakuen-overview.jpg %}
+
+
+当然，大中有小，小中有大，各种小湖流水，景色清幽
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-gorakuen-lake.jpg %}
+
+
+如果说冈山什么出名，那一定不能不提到大家都听说过的，桃太郎！
+感觉桃太郎对于冈山，就像是奈良的鹿，熊本的くまモン是相同的存在。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-momotarou.jpg %}
+
+
+连井盖都是桃太郎，我也真是 -_-||
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-water-cover.jpg %}
+
+
+冈山逛得差不多了，下一站是仓敷。回去冈山站的公交，竟然是做了一个特别版
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-okayama-tama-bus.jpg %}
+
+传说的「たま（tama）電車」，真是幸运~~
+
+---
+# 5月5号 -- 仓敷到着
+{% centerquote %} 倉敷（くらしき）{% endcenterquote %}
+一路坐着JR的自由席，顺顺利利的来到了仓敷
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-kurasiki-eki.jpg %}
+
+
+而我们所住的宾馆，就是车站门口，对的，正门口，走路10秒钟的这个大楼
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-kurasiki-apa-hotel.jpg %}
+
+
+仓敷站门口的广场
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0505-kurasiki-eki-square.jpg %}
+
+
+逛了一天的仓敷，实在是累了，于是直接回宾馆休息啦
+说实话，这个アパホテル的实际情况着实一般。
+反正是睡个觉，太累了就不挑了。
+
+
+---
+# 5月6号 -- 雨中乱逛仓敷
+
+没想到刚刚来到仓敷，就赶上个雨天，下的这个大。然后，我们发现了仓敷站后面，竟然是outlet。我勒个去，这购物的设定也太明显了。。。
+但是，毕竟是下雨，于是我们就顺(wu)其(ke)自(nai)然(he)着去逛逛了，然后。。。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-shopping.jpg %}
+
+这广告牌，亮瞎双眼。。。。我回去点眼药了。。。
+
+下午看雨小点了，于是我们开始闲逛美观地区，顺着恵比寿通り乱走
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-ebisu.jpg %}
+
+
+然后糊里糊涂的逛到了阿智神社，这个就是传说的「阿智の藤」，一棵500多年的古树。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-achinotou.jpg %}
+
+
+这就是阿智神社，其实是一个不太大的庭院，在美观地区的一座小山上，一路上很清幽
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-achijinjia.jpg %}
+
+
+顺着阿智神社的山路下来，就是美观地区的小巷，为啥有来到丽江的感觉
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-bikanchiku.jpg %}
+
+
+周围的各种小店都很精致，其中发现了MT的专卖店，小宝库一个，女王大人已经失去理智了。。
+{% qnimg 2016-07-09-travel-japan-setonaikai-north/0506-kurasiki-MT.jpg %}
+
+这里到提到一段有意思的经历，我们逛到一家布置很别致的陶制品馆，馆里只有以为白发苍苍的老太太，但是非常有气质。见到我们进来就攀谈起来，很惊讶我们是中国人，竟然来仓敷这里游玩（可见这里非常少外国人来玩么。。。）然后提到了【大原】。其实，我只知道仓敷的美观地区的重要景点之一，就是大原美术馆。我本来以为大原只是个区域名，原来是建馆人的名字。老太太带着各种崇敬之情给我们介绍大原先生。然后还说道她从小喜欢艺术，曾经家里很穷，一直有想去大原美术馆参观的愿望。大原先生为仓敷地区做出了非常大的贡献等等等。可见大原先生对仓敷人的影响有多深，以及大原美术馆对仓敷地区的重要性有多大。这种和本地人聊天的感觉，比听导游单纯的介绍，感触深很多。
 
 ---
 
