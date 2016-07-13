@@ -8,7 +8,7 @@ tags:
   - okinawa
   - japan
 categories:
-  - travel
+  - 旅行
 ---
 
 对于日本旅游来讲，大多数人是不会单独去冲绳旅行的。
