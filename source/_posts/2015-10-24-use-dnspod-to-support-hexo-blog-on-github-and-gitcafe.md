@@ -46,21 +46,21 @@ deploy:
 NDSPod的域名解析服务中，提供根据线路进行不同的路由的功能是免费的，这也是为什么选择DNSPod的原因
 
 添加了域名后，DNSPod会自动导入当前的域名下的各种记录
-{% qnimg "2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/dnspod-add-domain-name.jpg" %}
+![2016-07-27_dnspod-add-domain-name.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/2016-07-27_dnspod-add-domain-name.jpg)
 
 在这里我们可设置针对不同线路的CNAME记录
 
-{% qnimg "2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/dnspod-setting-of-winterttr.jpg" %}
+![2016-07-27_dnspod-setting-of-winterttr.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/2016-07-27_dnspod-setting-of-winterttr.jpg)
 
 
 
 # 在域名提供商更改NS记录
 我是用的是godaddy申请的域名，godaddy中NS记录不是在`Zone File`的配置下，而是点击域名旁边的下拉列表更改的
-{% qnimg "2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/godaddy-ns-record.jpg" %}
+![2016-07-27_godaddy-ns-record.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/2016-07-27_godaddy-ns-record.jpg)
 
 将其设置成DNSPod的服务器地址
 
-{% qnimg "2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/godaddy-set-dnspod.jpg" %}
+![2016-07-27_godaddy-set-dnspod.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/2016-07-27_godaddy-set-dnspod.jpg)
 
 
 # 等待
@@ -139,3 +139,5 @@ NDSPod的域名解析服务中，提供根据线路进行不同的路由的功�
 Please refer to the author's name `winterTTr` when you remix, transform, and build upon this material. 
 {% endraw %}
 本作品由`winterTTr`创作，采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。修改，参照或者转载请注明作者`winterTTr`
+
+

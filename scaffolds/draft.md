@@ -19,10 +19,6 @@ categories:
 
 # sample code
 
-- qiniu picture
-{% qnimg test/demo.png title:title alt:description %}
-{% qnimg test/demo.png title:title alt:description extend:-watermark.black %}
-
 - quote
 {% blockquote [author[, source]] [link] [source_link_title] %}
 content

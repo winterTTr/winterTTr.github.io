@@ -50,7 +50,7 @@ lstFoo[0] = 2
 
 如下图所示：
 
-{% qnimg "2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg" %}
+![2016-07-27_mutable-immutable-object.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-python-passing-arguments-as-value-or-reference/2016-07-27_mutable-immutable-object.jpg)
 
 
 # Python的函数参数传递：传值？引用？
@@ -92,3 +92,5 @@ print nfoo #结果是[10]
 Please refer to the author's name `winterTTr` when you remix, transform, and build upon this material. 
 {% endraw %}
 本作品由`winterTTr`创作，采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。修改，参照或者转载请注明作者`winterTTr`
+
+

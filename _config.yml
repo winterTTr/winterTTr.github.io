@@ -105,26 +105,6 @@ links:
 sitemap:
   path: sitemap.xml
 
-
-# Qiniu Config
-qiniu:
-  offline: false
-  sync: true
-  bucket: winterttr-github-io
-  access_key: 8k5DN11zjqRdx7TgHS0S7R9RoCnxaQzSpV8ptBqy
-  secret_key: 4hJy9NbPpzM4iY9xtLDjxKuZjV4tOyob4OdQIOLU
-  dirPrefix: static
-  urlPrefix: http://7xljtv.com1.z0.glb.clouddn.com/static
-  local_dir: static
-  update_exist: true
-  image: 
-    folder: images
-    extend: 
-  js:
-    folder: js
-  css:
-    folder: css
-
 # baidu sitemap
 baidusitemap:
   path: baidusitemap.xml

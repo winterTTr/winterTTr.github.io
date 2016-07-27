@@ -22,9 +22,6 @@ content.
 **sample code**
 
 
-{% qnimg test/demo.png title:title alt:description %}
-{% qnimg test/demo.png title:title alt:description extend:-watermark.black %}
-
 
 {% blockquote [author[, source]] [link] [source_link_title] %}
 content

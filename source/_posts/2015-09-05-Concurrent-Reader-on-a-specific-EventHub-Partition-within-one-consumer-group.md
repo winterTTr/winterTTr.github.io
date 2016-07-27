@@ -105,7 +105,7 @@ public void Concurrent_Readers_On_1Partition_1ConsumerGroup()
 
 First we create more than 5 reader one a specific partition:
 
-{% qnimg "2015-09-05-Concurrent-Reader-on-a-specific-EventHub-Partition-within-one-consumer-group/exception-more-than-5-reader.jpg" %}
+![2016-07-27_exception-more-than-5-reader.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/2016-07-27_exception-more-than-5-reader.jpg)
 
 We will received the above exception.
 
@@ -128,3 +128,5 @@ Hope they can give you some more idea when you try to read the data from even hu
 Please refer to the author's name `winterTTr` when you remix, transform, and build upon this material. 
 {% endraw %}
 本作品由`winterTTr`创作，采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。修改，参照或者转载请注明作者`winterTTr`
+
+
