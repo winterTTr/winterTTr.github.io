@@ -31,7 +31,7 @@ Before the config step, you can simply use the following command to have a test:
 > &gt; ./emacs-helm.sh
 
 This would be a simple test environment, and it's very handy.
-{% qnimg 2015-10-10-emacs-helm/helm-preview.jpg %}
+![2016-07-27_helm-preview.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-10-emacs-helm/2016-07-27_helm-preview.jpg)
 
 
 ## Basic Config Helm
@@ -97,3 +97,5 @@ And also:
 Please refer to the author's name `winterTTr` when you remix, transform, and build upon this material. 
 {% endraw %}
 本作品由`winterTTr`创作，采用[知识共享署名-非商业性使用 4.0 国际许可协议](http://creativecommons.org/licenses/by-nc-sa/4.0/)进行许可。修改，参照或者转载请注明作者`winterTTr`
+
+
