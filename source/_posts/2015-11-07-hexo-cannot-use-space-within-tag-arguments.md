@@ -65,7 +65,7 @@ Usually, we travel through each of the lexical node, save them as specific node 
 # Hexo implementation issue
 Here is the [pull request](https://github.com/hexojs/hexo/pull/1581) for fix the issue, i would like to talk based on it.
 
-![2016-07-27_pull_request_hexo_space_issue.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-07-hexo-cannot-use-space-within-tag-arguments/2016-07-27_pull_request_hexo_space_issue.jpg)
+![pull_request_hexo_space_issue.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-07-hexo-cannot-use-space-within-tag-arguments/pull_request_hexo_space_issue.jpg)
 
 
 We can see that, current implementation of `hexo`:

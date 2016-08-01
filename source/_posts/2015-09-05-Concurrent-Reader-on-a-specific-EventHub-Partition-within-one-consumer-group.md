@@ -105,7 +105,7 @@ public void Concurrent_Readers_On_1Partition_1ConsumerGroup()
 
 First we create more than 5 reader one a specific partition:
 
-![2016-07-27_exception-more-than-5-reader.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/2016-07-27_exception-more-than-5-reader.jpg)
+![](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-Concurrent-Reader-on-a-specific-EventHub-Partition-within-one-consumer-group/exception-more-than-5-reader.jpg)
 
 We will received the above exception.
 

@@ -6,6 +6,9 @@ categories:
   - hexo
 ---
 
+Here is the list of common hexo workflow commands.
+
+<!--more-->
 
 ## Create draft
 

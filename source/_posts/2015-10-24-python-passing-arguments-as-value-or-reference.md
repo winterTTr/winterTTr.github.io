@@ -50,7 +50,7 @@ lstFoo[0] = 2
 
 如下图所示：
 
-![2016-07-27_mutable-immutable-object.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-python-passing-arguments-as-value-or-reference/2016-07-27_mutable-immutable-object.jpg)
+![mutable-immutable-object.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg)
 
 
 # Python的函数参数传递：传值？引用？
