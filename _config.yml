@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Life & Note - winterTTr
-subtitle: winterTTr's Blog
+title: Life & Note
+subtitle: winterTTr Blog
 description: Memo down pieces of Life
 author: winterTTr
 language: en
@@ -111,50 +111,3 @@ baidusitemap:
 
 
 
-## Third-party services
-
-# Duoshuo ShortName
-#duoshuo_shortname:
-
-# Disqus
-disqus_shortname: winterTTr
-
-# Baidu Analytics ID
-baidu_analytics: 12217b6eff7690192f4e4469013eee76
-
-# Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters/
-google_site_verification: D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw
-
-
-# Google Analytics
-google_analytics: UA-67136287-1
-
-# CNZZ count
-#cnzz_siteid:
-
-# Share
-jiathis: true
-
-# Baidu Share
-# Available value:
-#    button | slide
-baidushare:
-  type: button
-
-# Share
-#duoshuo_share: true
-duoshuo_hotartical: true
-
-
-# Make duoshuo show UA
-# user_id must NOT be null when admin_enable is true!
-# you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
-
-# Swiftype Search API Key
-swiftype_key: WRpxR8GrCr4jNe6LcLyU

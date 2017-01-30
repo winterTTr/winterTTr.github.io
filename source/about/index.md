@@ -1,4 +1,4 @@
-title: about
+title: About winterTTr
 date: 2015-09-03 19:52:41
 comments: false
 ---
@@ -7,39 +7,39 @@ comments: false
 
 Here is about me and my life.
 
-## Living
+## Work
 
-A software engineer at Microsoft.
+Senior software engineer @ Microsoft.
 
-In fact, i am **Linux mind** guy, however, spending lots of time working on windows with C# and focus on:
+In fact, i am **Linux mind** guy.
 
-- Azure Cloud Service
-- IoT
+However, spending lots of time working on Azure with C# and focus on:
+
+- Azure
+- Cognitive Services
 
 
 ## More fun
-Besides the work, i am fully interesting on many things:
+Besides the work, i am interested on many things:
 
 - Common Lisp
 - Emacs
-- Python
-- git & github
+- Productivity Tools
 - iOS software collection
-- GTD
+- GTD: Omnifocus
 - Japanese Language
 - Music: Guitar & Drum & Piano
-- Boom Beach (Level 54)
 
 And always:
 
-- My Lovely girl friend - **YiRan**
+- My Lovely girl friend - **Koyi**
 
 
 ## Open Source Projects
 
 - [winterTTr.github.io](https://github.com/winterTTr/winterTTr.github.io/tree/hexo-content) -- Yes, this blog
 - [Emacs Ace Jump Mode](https://github.com/winterTTr/ace-jump-mode)
-- [My Emacs configuration](https://github.com/winterTTr/emacs-of-winterTTr)
+- [My Emacs configuration](https://github.com/winterTTr/emacs-winterTTr)
 - More is coming :-)
 
 ## Music Studio & Band
