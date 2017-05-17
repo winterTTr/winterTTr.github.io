@@ -49,7 +49,7 @@ menu:
   archives: /archives
   tags: /tags
   about: /about
-  #sitemap: /sitemap.xml
+  sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -263,27 +263,6 @@ post_copyright:
   enable: false
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
-
-
-# ---------------------------------------------------------------
-# Misc Theme Settings
-# ---------------------------------------------------------------
-
-# Custom Logo.
-# !!Only available for Default Scheme currently.
-# Options:
-#   enabled: [true/false] - Replace with specific image
-#   image: url-of-image   - Images's url
-custom_logo:
-  enabled: false
-  image:
-
-
-# Code Highlight theme
-# Available value:
-#    normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
 
 
 # ---------------------------------------------------------------

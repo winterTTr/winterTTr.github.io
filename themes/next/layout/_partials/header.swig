@@ -33,11 +33,7 @@
 </div>
 
 <nav class="site-nav">
-<<<<<<< HEAD
-  {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || config.search %}
-=======
   {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || theme.local_search.enable %}
->>>>>>> cbb1611a36a0f8a74b6888997ff9358b4c8e0303
 
   {% if theme.menu %}
     <ul id="menu" class="menu">
@@ -57,11 +53,7 @@
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
             <a href="javascript:;" class="st-search-show-outputs">
-<<<<<<< HEAD
-          {% elseif config.search %}
-=======
           {% elseif theme.local_search.enable || theme.algolia_search.enable %}
->>>>>>> cbb1611a36a0f8a74b6888997ff9358b4c8e0303
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
