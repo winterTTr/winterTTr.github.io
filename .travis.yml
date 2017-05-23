@@ -14,6 +14,7 @@ addons:
 before_install:
 - openssl aes-256-cbc -K $encrypted_1f03ec56ea65_key -iv $encrypted_1f03ec56ea65_iv -in ubuntu_ea_pvk.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
+- sed -i "s/__GH_TOKEN__/${GH_TOKEN}/" _config.yml
 
 install:
 - npm install hexo-cli -g
