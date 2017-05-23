@@ -1,19 +1,26 @@
 language: node_js
+
 node_js:
 - 6
+
 branches:
   only:
   - auto-deployment
+
+addons:
+  ssh_known_hosts:
+  - ubuntu-ea.cloudapp.net
+
+before_install:
+- openssl aes-256-cbc -K $encrypted_1f03ec56ea65_key -iv $encrypted_1f03ec56ea65_iv -in ubuntu_ea_pvk.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+
 install:
 - npm install hexo-cli -g
 - npm install
 - git clone https://github.com/winterTTr/winterTTr.github.io
-addons:
-  ssh_known_hosts:
-  - ubuntu-ea.cloudapp.net
+
 script:
 - hexo clean
 - hexo generate
-before_install:
-- openssl aes-256-cbc -K $encrypted_1f03ec56ea65_key -iv $encrypted_1f03ec56ea65_iv -in ubuntu_ea_pvk.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
+- hexo deploy
