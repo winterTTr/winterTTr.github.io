@@ -26,3 +26,8 @@ script:
 - hexo clean
 - hexo generate
 - hexo deploy
+
+
+cache:
+  directories:
+  - node_modules
