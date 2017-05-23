@@ -9,7 +9,7 @@ branches:
 
 addons:
   ssh_known_hosts:
-  - ubuntu-ea.cloudapp.net
+  - ubuntu-ea.cloudapp.net:22
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_1f03ec56ea65_key -iv $encrypted_1f03ec56ea65_iv -in ubuntu_ea_pvk.enc -out ~/.ssh/id_rsa -d
