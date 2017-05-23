@@ -1,4 +1,4 @@
-title: 新的一年，新的开始
+title: 新的一年 - 新的开始
 sticky: 0
 toc_number: false
 date: 2017-02-01 10:10:23
