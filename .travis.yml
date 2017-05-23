@@ -19,9 +19,8 @@ before_install:
 install:
 - npm install hexo-cli -g
 - npm install
-- git clone https://github.com/winterTTr/winterTTr.github.io
-- git config user.name "winterTTr"
-- git config user.email "winterTTr@gmail.com"
+- git config --global user.name "winterTTr"
+- git config --global user.email "winterTTr@gmail.com"
 
 script:
 - hexo clean
