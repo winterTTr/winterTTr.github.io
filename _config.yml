@@ -76,8 +76,7 @@ theme: next
 deploy:
 - type: git
   repo:
-    github: https://github.com/winterTTr/winterTTr.github.io.git
-#    gitcafe: https://gitcafe.com/winterTTr/winterTTr.git
+     github: https://__GH_TOKEN__@github.com/winterTTr/winterTTr.github.io.git
 - type: rsync
   host: ubuntu-ea.cloudapp.net
   user: rsync
