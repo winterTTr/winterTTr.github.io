@@ -1,0 +1,1 @@
+git subtree pull --prefix themes/next --squash https://github.com/theme-next/hexo-theme-next.git master

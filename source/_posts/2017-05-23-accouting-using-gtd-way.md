@@ -2,6 +2,7 @@ title: 用GTD的思路记账
 sticky: 0
 toc_number: false
 date: 2017-05-23 14:31:02
+mathjax: true
 tags:
 - 效率
 - iOS
