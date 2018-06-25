@@ -73,7 +73,7 @@ def ChangeList( a ):
     a[0] = 10
 lstFoo = [2]
 ChangeList(lstFoo )
-print nfoo #结果是[10]
+print lstFoo #结果是[10]
 {% endcodeblock %}
 
 当传递给ChangeList的时候，变量仍旧按照“传值”的方式，复制了变量lstFoo 的值，于是a和lstFoo 指向同一个对象，但是，list是可以改变的对象，对a[0]的操作，就是对lstFoo指向的对象的内容的操作，于是，这时的a[0] = 10，就是更改了lstFoo 指向的对象的第一个元素，所以，再次输出lstFoo 时，显示[10]，内容被改变了，看起来，像C++中的按引用传递。
