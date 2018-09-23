@@ -70,7 +70,7 @@ CNAME的意义，简单说就是别名，即将一个域名射到另一个域名
 ## 现实中的一些例子
 这个就是我的域名在`DNSPod`中的设置。
 
-![dnspod-setting-of-winterttr.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-10-23-from-dns-to-github-custom-domain/dnspod-setting-of-winterttr.jpg)
+![dnspod-setting-of-winterttr.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-10-23-from-dns-to-github-custom-domain/dnspod-setting-of-winterttr.jpg)
 
 可以看到，NS记录为dnspod的服务器域名，`dnspod`提供了一种非常方便的服务。就是可以根据不同的线路类型，进行不同的解析。图中可以看到，国内的使用gitcafe，国外的使用github，同时，baidu抓取国内线路gitcafe的内容，躲避了github封闭baidu spider的问题。
 

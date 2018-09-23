@@ -17,7 +17,7 @@ ios上的网络代理一直是我诟病的话题之一。
 
 随着ios9添加的新的`Network Extension`的特性，surge([App Store](https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637))出现了，利用surge所提供给我们的功能，我们将给出一个近乎完美的全局代理方案。
 
-![surge.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge.jpg)
+![surge.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge.jpg)
 
 <!--more-->
 
@@ -39,27 +39,27 @@ Surge并不是一个打开即可以使用的工具，它是一个高可配置的
 打开Surge之后，我们只有一个默认的配置文件。
 我们可以看到，默认的配置文件是所有的网络都是直接进行访问(all to Direct)。
 
-![surge-first-open.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge-first-open.jpg)
+![surge-first-open.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge-first-open.jpg)
 
 ## 编辑已有配置
 点击`Edit`之后，我们可以进行更多的设置
 
-![surge_edit.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_edit.jpg)
+![surge_edit.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_edit.jpg)
 
 对于已有的文件，我们可以更改名称，添加更多的代理，添加规则
 
-![surge_edit_existing_config.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_edit_existing_config.jpg)
+![surge_edit_existing_config.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_edit_existing_config.jpg)
 
 
 ## 代理设置
 这个是代理设置界面，在这里，可以添加三种类型的代理，`http`|`https`|`socks5`。
-![surge_proxy.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_proxy.jpg)
+![surge_proxy.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_proxy.jpg)
 
 我们发现，这里并没有我们所需要的`shadowsocks`。是的，`shadowsocks`在界面似乎不可以直接添加，只能通过直接编辑配置文件，添加custom类型的代理。我们随后会说到。
 
 
 ## 添加规则
-![surge_rule.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_rule.jpg)
+![surge_rule.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_rule.jpg)
 在规则配置界面中，可以添加三种很多种不同的预定义类型的规则
 - domain: 域名完全匹配
 - suffix: 匹配域名的结尾部分
@@ -81,13 +81,13 @@ Surge并不是一个打开即可以使用的工具，它是一个高可配置的
 在`编辑已有配置`中，选择`Download configuration from URL`，然后添加
 > http://surge.pm/main.conf
 
-![surge_download.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_download.jpg)
+![surge_download.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_download.jpg)
 
 
 ## 更改shadowsocks配置
 我们上文提到的配置文件中，已经为我们添加了shadowsocks的代理，不过，添加的代理只是例子，不能使用，我们需要利用上面提到的更改配置文件的办法，更改这个代理到我们自己的shadowsocks服务器的配置。
 
-![surge_shadowsocks.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_shadowsocks.jpg)
+![surge_shadowsocks.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_shadowsocks.jpg)
 
 - server: 更改为自己的ss服务器的地址
 - port: 为端口号
@@ -101,12 +101,12 @@ Surge并不是一个打开即可以使用的工具，它是一个高可配置的
 
 
 ## 请求解析
-![surge_request_analytics.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_request_analytics.jpg)
+![surge_request_analytics.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_request_analytics.jpg)
 在请求界面中，我们可以看到具体的每个请求的header和一些相关的参数。据说作者之后会加入请求的body的显示。
 
 ## 规则分析
 在`Rule`界面中，我们也可以看到规则的相应情况，而且，最人性化的，我们在这里可以动态添加规则项
-![surge_change_rule.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_change_rule.jpg)
+![surge_change_rule.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-04-using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/surge_change_rule.jpg)
 
 ---
 经过上面的介绍，相比大家已经对surge的功能有了比较详细的了解，打开配置文件中，大部分的配置行都和我们之前介绍的界面相关，语法很容易理解。也希望大家多多分享自己的配置文件，服务于大家。

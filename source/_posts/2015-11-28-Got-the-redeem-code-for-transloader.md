@@ -13,7 +13,7 @@ categories:
 竟然中了一枚transloader的兑换码，奖不大但是心情很好~~
 顺便安利一下少数派，文章品质很不错~
 
-![got_transloader_code.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-11-28-Got-the-redeem-code-for-transloader/got_transloader_code.jpg)
+![got_transloader_code.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-11-28-Got-the-redeem-code-for-transloader/got_transloader_code.jpg)
 
 <!--more-->
 
