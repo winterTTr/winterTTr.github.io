@@ -46,7 +46,7 @@ $$(时间, 地点, 商家) \iff 消费金额 $$
 
 用我个人习惯使用*MoneyWiz 2*举例，下图中的是*MoneyWzi 2*中的`交易布局`界面，在这个界面的设置基本上也展示了*MoneyWzi 2*中对记账条目的定义。
 
-{% img http://7xljtv.com1.z0.glb.clouddn.com/images/2017-05-23-accouting-using-gtd-way/MoneyWiz2-layout.png 300 %}
+{% img https://winterttrgithubio.blob.core.windows.net/images/2017-05-23-accouting-using-gtd-way/MoneyWiz2-layout.png 300 %}
 
 
 ## 账目报告展示了什么
@@ -126,7 +126,7 @@ $$(时间, 地点, 商家) \iff 消费金额 $$
 
 最终实现的效果，类似如下的演示
 
-{% img   http://7xljtv.com1.z0.glb.clouddn.com/images/2017-05-23-accouting-using-gtd-way/accouting-workflow.gif 300 %}
+{% img   https://winterttrgithubio.blob.core.windows.net/images/2017-05-23-accouting-using-gtd-way/accouting-workflow.gif 300 %}
 
 
 # 后记

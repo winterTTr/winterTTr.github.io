@@ -27,7 +27,7 @@ Fakes come in two flavours:
 - A `stub` replaces a class with a small substitute that implements the same interface. To use stubs, you have to design your application so that each component depends only on interfaces, and not on other components.
 
 A good diagram to distinguish those two:
-![stub-shim-concept-diagram.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/stub-shim-concept-diagram.jpg)
+![stub-shim-concept-diagram.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/stub-shim-concept-diagram.jpg)
 
 
 
@@ -66,10 +66,10 @@ So this `UtcNowTick` is depends on the `DateTime`, and right now we want to test
 This is a typical scenario for us to use `shim` to test because we cannot control the behaviour of the `system` library.
 
 First, we add the fake to the library to we want to fake.
-![add-fakes-assembly.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/add-fakes-assembly.jpg)
+![add-fakes-assembly.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/add-fakes-assembly.jpg)
 
 After this operation, we can find that we have a fake assembly created:
-![after-add-fake.jpg](http://7xljtv.com1.z0.glb.clouddn.com/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/after-add-fake.jpg)
+![after-add-fake.jpg](https://winterttrgithubio.blob.core.windows.net/images/2015-09-05-CSharp-Unit-Test-with-Microsoft-Fakes/after-add-fake.jpg)
 
 So right now, we have the fake assembly for system now, and we can control the behaviour of system namespace api as below:
 
