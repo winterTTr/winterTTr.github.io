@@ -109,4 +109,5 @@ baidusitemap:
   path: baidusitemap.xml
 
 
-
+# Set default keywords (Use a comma to separate)
+keywords: "Hexo, NexT"
