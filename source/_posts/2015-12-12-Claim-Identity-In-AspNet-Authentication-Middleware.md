@@ -1,6 +1,5 @@
 title: Claims Identity in ASP.NET authentication Middleware
 sticky: 0
-toc_number: false
 date: 2015-12-12 21:10:14
 tags:
   - Claims

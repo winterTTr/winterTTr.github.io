@@ -1,6 +1,5 @@
 title: 再游日本关西--濑户内海北岸游(姬路，冈山，仓敷）
 sticky: 0
-toc_number: false
 date: 2016-07-09 19:56:44
 tags:
   - 旅游

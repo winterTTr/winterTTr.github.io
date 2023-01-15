@@ -1,6 +1,5 @@
 title: hexo cannot use space within tag plugin arguments
 sticky: 0
-toc_number: false
 date: 2015-11-07 10:44:06
 tags:
   - hexo

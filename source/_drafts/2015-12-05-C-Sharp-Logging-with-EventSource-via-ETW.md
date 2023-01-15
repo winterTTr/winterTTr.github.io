@@ -5,7 +5,6 @@ tags:
   - EventSource
   - 'C#'
 sticky: 0
-toc_number: false
 categories:
   - 'C#'
 date: 2015-12-05 22:36:07
@@ -166,10 +165,6 @@ code snippet
 
 - Vimeo
 {% vimeo video_id %}
-
-- Include Posts
-{% post_path slug %}
-{% post_link slug [title] %}
 
 
 - Include Assets

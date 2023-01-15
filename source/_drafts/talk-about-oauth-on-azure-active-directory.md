@@ -1,6 +1,5 @@
 title: talk about oauth on azure active directory
 sticky: 0
-toc_number: false
 tags:
  - active directory
  - azure
@@ -55,10 +54,6 @@ code snippet
 
 - Vimeo
 {% vimeo video_id %}
-
-- Include Posts
-{% post_path slug %}
-{% post_link slug [title] %}
 
 
 - Include Assets

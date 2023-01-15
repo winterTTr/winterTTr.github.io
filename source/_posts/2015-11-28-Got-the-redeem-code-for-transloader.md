@@ -1,6 +1,5 @@
 title: 无意中中了一枚transloader的兑换码
 sticky: 0
-toc_number: false
 date: 2015-11-28 21:25:52
 tags:
   - mac app
