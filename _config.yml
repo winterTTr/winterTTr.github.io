@@ -80,7 +80,7 @@ deploy:
   repo:
     github: https://github.com/winterTTr/winterTTr.github.io.git
     branch: hexo-content
-    token: ${{ secrets.GITTOKEN }}
+    token: $GITTOKEN
 # - type: rsync
 #   host: ubuntu-ea.cloudapp.net
 #   user: rsync
