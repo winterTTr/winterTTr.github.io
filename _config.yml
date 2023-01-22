@@ -78,8 +78,12 @@ theme: next
 deploy:
 - type: git
   repo:
-    github: https://github.com/winterTTr/winterTTr.github.io.git
-    token: $GITTOKEN
+    github:
+      url: https://github.com/winterTTr/winterTTr.github.io.git
+      branch: master
+      token: $GITTOKEN
+  name: winterTTr
+  email: winterTTr@gmail.com
 # - type: rsync
 #   host: ubuntu-ea.cloudapp.net
 #   user: rsync
