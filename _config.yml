@@ -79,7 +79,7 @@ deploy:
 - type: git
   repo:
     github:
-      url: https://github.com/winterTTr/winterTTr.github.io.git
+      url: https://github.com/winterttr/winterttr.github.io.git
       branch: master
       token: $GITTOKEN
   name: winterTTr
