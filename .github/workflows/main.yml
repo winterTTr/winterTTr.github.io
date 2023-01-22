@@ -21,6 +21,4 @@ jobs:
       shell: bash
       env:
         GITTOKEN: ${{ secrets.GITTOKEN }}
-      run: |
-        echo ${GITTOKEN:0:5}
-        hexo deploy
+      run: hexo deploy
