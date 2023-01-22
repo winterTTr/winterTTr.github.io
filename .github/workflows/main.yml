@@ -19,4 +19,7 @@ jobs:
     - shell: bash
       env:
         GITTOKEN: ${{ secrets.GITTOKEN }}
-      run: hexo deploy
+      run: |
+        git config --global user.name "winterTTr"
+        git config --global user.email "winterTTr@gmail.com"
+        hexo deploy
