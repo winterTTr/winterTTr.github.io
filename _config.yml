@@ -78,7 +78,8 @@ theme: next
 deploy:
 - type: git
   repo:
-    github: https://__GH_TOKEN__@github.com/winterTTr/winterTTr.github.io.git
+    github: https://github.com/winterTTr/winterTTr.github.io.git
+    branch: hexo-content
 - type: rsync
   host: ubuntu-ea.cloudapp.net
   user: rsync
