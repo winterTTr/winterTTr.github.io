@@ -12,7 +12,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: '19.x'
+        node-version: '18.x'
     - name: npm install hexo-cli
       run: npm install hexo-cli -g
     - name: npm install packages
