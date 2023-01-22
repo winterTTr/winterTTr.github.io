@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
+    - name: setup node deps
+      run: nvm install --lts
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
