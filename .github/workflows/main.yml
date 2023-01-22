@@ -9,12 +9,10 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v1
-    - name: setup node deps
-      run: nvm install --lts
     - name: Setup Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
-        node-version: '18.x'
+        node-version: 19
     - name: npm install hexo-cli
       run: npm install hexo-cli -g
     - name: npm install packages
