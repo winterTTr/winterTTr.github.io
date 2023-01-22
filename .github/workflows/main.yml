@@ -8,14 +8,12 @@ jobs:
     name: hexo build
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - name: npm install hexo-cli
-      run: npm install hexo-cli -g
-    - name: npm install packages
-      run: npm install
-    - name: hexo generate
-      run: hexo generate
+    - run: npm install hexo-cli -g
+    - run: npm install
+    - run: hexo generate
+    - run: hexo generate

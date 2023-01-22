@@ -80,13 +80,14 @@ deploy:
   repo:
     github: https://github.com/winterTTr/winterTTr.github.io.git
     branch: hexo-content
-- type: rsync
-  host: ubuntu-ea.cloudapp.net
-  user: rsync
-  root: /var/www/html
-  port: 22
-  delete: true
-  verbose: true
+    token: ${{ secrets.GITTOKEN }}
+# - type: rsync
+#   host: ubuntu-ea.cloudapp.net
+#   user: rsync
+#   root: /var/www/html
+#   port: 22
+#   delete: true
+#   verbose: true
 
 
 # rss
