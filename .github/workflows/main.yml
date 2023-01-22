@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - hexo-context
+    - hexo-content
 
 jobs:
   hexo_job:
