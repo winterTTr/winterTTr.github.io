@@ -79,7 +79,6 @@ deploy:
 - type: git
   repo:
     github: https://github.com/winterTTr/winterTTr.github.io.git
-    branch: hexo-content
     token: $GITTOKEN
 # - type: rsync
 #   host: ubuntu-ea.cloudapp.net
