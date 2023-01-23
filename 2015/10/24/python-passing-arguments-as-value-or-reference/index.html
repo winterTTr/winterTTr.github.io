@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="google-site-verification" content="D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"winterttr.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":false,"scrollpercent":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="我想，这个标题或许是很多初学者的问题。尤其是像我这样的对C&#x2F;C++比较熟悉，刚刚进入python殿堂的朋友们。C&#x2F;C++的函数参数的传递方式根深蒂固的影响这我们的思维–引用？传值？究竟是那种呢。语言的特性决定了是使用的方法，那么，现在我们来探究一下python的函数参数传递方式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python的函数参数传递：传值？引用？">
+<meta property="og:url" content="http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/index.html">
+<meta property="og:site_name" content="Life &amp; Note">
+<meta property="og:description" content="我想，这个标题或许是很多初学者的问题。尤其是像我这样的对C&#x2F;C++比较熟悉，刚刚进入python殿堂的朋友们。C&#x2F;C++的函数参数的传递方式根深蒂固的影响这我们的思维–引用？传值？究竟是那种呢。语言的特性决定了是使用的方法，那么，现在我们来探究一下python的函数参数传递方式。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://winterttrgithubio.blob.core.windows.net/images/2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg">
+<meta property="article:published_time" content="2015-10-24T19:58:47.000Z">
+<meta property="article:modified_time" content="2023-01-23T07:17:43.152Z">
+<meta property="article:author" content="winterTTr">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="arguments">
+<meta property="article:tag" content="参数传递">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://winterttrgithubio.blob.core.windows.net/images/2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg">
+
+<link rel="canonical" href="http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Python的函数参数传递：传值？引用？ | Life & Note</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?12217b6eff7690192f4e4469013eee76";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Life & Note" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Life & Note</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">winterTTr Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">65</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winterTTr">
+      <meta itemprop="description" content="Memo down pieces of Life">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Life & Note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python的函数参数传递：传值？引用？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-10-24 19:58:47" itemprop="dateCreated datePublished" datetime="2015-10-24T19:58:47+00:00">2015-10-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2015/10/24/python-passing-arguments-as-value-or-reference/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/10/24/python-passing-arguments-as-value-or-reference/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1.2k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>我想，这个标题或许是很多初学者的问题。尤其是像我这样的对C&#x2F;C++比较熟悉，刚刚进入python殿堂的朋友们<br>。C&#x2F;C++的函数参数的传递方式根深蒂固的影响这我们的思维–引用？传值？究竟是那种呢。<br>语言的特性决定了是使用的方法，那么，现在我们来探究一下python的函数参数传递方式。</p>
+<span id="more"></span>
+
+<h1 id="对象vs变量"><a href="#对象vs变量" class="headerlink" title="对象vs变量"></a>对象vs变量</h1><p>在python中，<code>类型</code>属于<code>对象</code>，<code>变量</code>是没有类型的，这正是python的语言特性，也是吸引着很多pythoner的一点。所有的变量都可以理解是内存中一个对象的“引用”，或者，也可以看似c中void*的感觉。所以，希望大家在看到一个python变量的时候，把<code>变量</code>和真正的<code>内存对象</code>分开。</p>
+<blockquote>
+<p>类型是属于对象的，而不是变量。</p>
+</blockquote>
+<p>这样，很多问题就容易思考了。</p>
+<p>例如：</p>
+<figure class="highlight python"><figcaption><span>对象vs变量</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nfoo = <span class="number">1</span>   <span class="comment">#一个指向int数据类型的nfoo（再次提醒，nfoo没有类型）</span></span><br><span class="line">lstFoo = [<span class="number">1</span>]   <span class="comment">#一个指向list类型的lstFoo，这个list中包含一个整数1</span></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="可更改-mutable-与不可更改-immutable-对象"><a href="#可更改-mutable-与不可更改-immutable-对象" class="headerlink" title="可更改(mutable)与不可更改(immutable)对象"></a>可更改(mutable)与不可更改(immutable)对象</h1><p>对应于上一个概念，就必须引出另了另一概念，这就是<code>可更改（mutable）对象</code>与<code>不可更改（immutable）对象</code>。<br>对于python比较熟悉的人们都应该了解这个事实，在python中，strings, tuples, 和numbers是不可更改的对象，而list,dict等则是可以修改的对象。那么，这些所谓的可改变和不可改变影响着什么呢？</p>
+<figure class="highlight python"><figcaption><span>可更改vs不可更改</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nfoo = <span class="number">1</span></span><br><span class="line">nfoo = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">lstFoo = [<span class="number">1</span>]</span><br><span class="line">lstFoo[<span class="number">0</span>] = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>代码第2行中，内存中原始的1对象因为不能改变，于是被“抛弃”，另nfoo指向一个新的int对象，其值为2</p>
+<p>代码第5行中，更改list中第一个元素的值，因为list是可改变的，所以，第一个元素变更为2。其实应该说，lstFoo指向一个<code>包含一个对象的数组</code>。赋值所发生的事情，是有一个新int对象被指定给lstFoo所指向的数组对象的第一个元素，但是对于lstFoo本身来说，所指向的数组对象并没有变化，只是数组对象的内容发生变化了。这个看似void*的变量所指向的对象仍旧是刚刚的那个有一个int对象的list。</p>
+<p>如下图所示：</p>
+<p><img src="https://winterttrgithubio.blob.core.windows.net/images/2015-10-24-python-passing-arguments-as-value-or-reference/mutable-immutable-object.jpg" alt="mutable-immutable-object.jpg"></p>
+<h1 id="Python的函数参数传递：传值？引用？"><a href="#Python的函数参数传递：传值？引用？" class="headerlink" title="Python的函数参数传递：传值？引用？"></a>Python的函数参数传递：传值？引用？</h1><p>对于变量（与对象相对的概念），其实，python函数参数传递可以理解为就是变量传值操作，用C++的方式理解，就是对void*赋值。如果这个变量的值不变，我们看似就是引用，如果这个变量的值改变，我们看着像是在赋值。有点晕是吧，我们仍旧据个例子。</p>
+<figure class="highlight python"><figcaption><span>不可变对象参数调用</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">ChangeInt</span>(<span class="params"> a </span>):</span><br><span class="line">    a = <span class="number">10</span></span><br><span class="line">nfoo = <span class="number">2</span> </span><br><span class="line">ChangeInt(nfoo)</span><br><span class="line"><span class="built_in">print</span> nfoo <span class="comment">#结果是2</span></span><br></pre></td></tr></table></figure>
+
+<p>这时发生了什么，有一个int对象2，和指向它的变量nfoo，当传递给ChangeInt的时候，按照传值的方式，复制了变量nfoo的值，这样，a就是nfoo指向同一个Int对象了，函数中a&#x3D;10的时候，发生什么？（还记得我上面讲到的那些概念么），int是不能更改的对象，于是，做了一个新的int对象，另a指向它（但是此时，被变量nfoo指向的对象，没有发生变化），于是在外面的感觉就是函数没有改变nfoo的值，看起来像C++中的传值方式。</p>
+<figure class="highlight python"><figcaption><span>可变对象参数调用</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">ChangeList</span>(<span class="params"> a </span>):</span><br><span class="line">    a[<span class="number">0</span>] = <span class="number">10</span></span><br><span class="line">lstFoo = [<span class="number">2</span>]</span><br><span class="line">ChangeList(lstFoo )</span><br><span class="line"><span class="built_in">print</span> lstFoo <span class="comment">#结果是[10]</span></span><br></pre></td></tr></table></figure>
+
+<p>当传递给ChangeList的时候，变量仍旧按照“传值”的方式，复制了变量lstFoo 的值，于是a和lstFoo 指向同一个对象，但是，list是可以改变的对象，对a[0]的操作，就是对lstFoo指向的对象的内容的操作，于是，这时的a[0] &#x3D; 10，就是更改了lstFoo 指向的对象的第一个元素，所以，再次输出lstFoo 时，显示[10]，内容被改变了，看起来，像C++中的按引用传递。</p>
+<p>恩，现在是不是对python中的变量和对象的概念有了更深入的理解了呢？<br>通过我上面的解释，我想大家也可以自己搞定其他类型对象的传递问题了吧。</p>
+<hr>
+<p>原文写于2008年，发表在CSDN，发现文章反馈比较多，所以适当更新后重新发表在个人博客。</p>
+<hr>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/weixin.jpg" alt="winterTTr WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="winterTTr Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>winterTTr
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/" title="Python的函数参数传递：传值？引用？">http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+              <a href="/tags/arguments/" rel="tag"><i class="fa fa-tag"></i> arguments</a>
+              <a href="/tags/%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92/" rel="tag"><i class="fa fa-tag"></i> 参数传递</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/10/23/from-dns-to-github-custom-domain/" rel="prev" title="从DNS到github pages自定义域名 -- 漫谈域名那些事">
+      <i class="fa fa-chevron-left"></i> 从DNS到github pages自定义域名 -- 漫谈域名那些事
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2015/10/24/use-dnspod-to-support-hexo-blog-on-github-and-gitcafe/" rel="next" title="使用DNSPod支持基于github和gitcafe双线路的hexo博客">
+      使用DNSPod支持基于github和gitcafe双线路的hexo博客 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1vs%E5%8F%98%E9%87%8F"><span class="nav-number">1.</span> <span class="nav-text">对象vs变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%AF%E6%9B%B4%E6%94%B9-mutable-%E4%B8%8E%E4%B8%8D%E5%8F%AF%E6%9B%B4%E6%94%B9-immutable-%E5%AF%B9%E8%B1%A1"><span class="nav-number">2.</span> <span class="nav-text">可更改(mutable)与不可更改(immutable)对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%EF%BC%9A%E4%BC%A0%E5%80%BC%EF%BC%9F%E5%BC%95%E7%94%A8%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">Python的函数参数传递：传值？引用？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winterTTr</p>
+  <div class="site-description" itemprop="description">Memo down pieces of Life</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/winterTTr" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;winterTTr" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:winterTTr@gmail.com" title="E-Mail → mailto:winterTTr@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/winterttr" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/winterttr" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/winterttr" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/winterttr" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/winterttr" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/winterttrr" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;winterttrr" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winterTTr</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:25</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://winterTTr.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://winterttr.me/2015/10/24/python-passing-arguments-as-value-or-reference/";
+    this.page.identifier = "2015/10/24/python-passing-arguments-as-value-or-reference/";
+    this.page.title = "Python的函数参数传递：传值？引用？";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://winterTTr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

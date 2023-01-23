@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="google-site-verification" content="D_sz64DZ1b38eNfy3sac0h9jaE2HKjSg0qeS_6Ar_aw">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"winterttr.me","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false,"b2t":false,"scrollpercent":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="When I use the hexo tag plugin, i found that I cannot use space within the parameter of a tag plugin, even I wrap the parameter with double quote. This confuses me a lot. Originally, I think this may">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo cannot use space within tag plugin arguments">
+<meta property="og:url" content="http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/index.html">
+<meta property="og:site_name" content="Life &amp; Note">
+<meta property="og:description" content="When I use the hexo tag plugin, i found that I cannot use space within the parameter of a tag plugin, even I wrap the parameter with double quote. This confuses me a lot. Originally, I think this may">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://winterttrgithubio.blob.core.windows.net/images/2015-11-07-hexo-cannot-use-space-within-tag-arguments/pull_request_hexo_space_issue.jpg">
+<meta property="article:published_time" content="2015-11-07T10:44:06.000Z">
+<meta property="article:modified_time" content="2023-01-23T07:17:43.152Z">
+<meta property="article:author" content="winterTTr">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="tag plugin">
+<meta property="article:tag" content="Nunjucks">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://winterttrgithubio.blob.core.windows.net/images/2015-11-07-hexo-cannot-use-space-within-tag-arguments/pull_request_hexo_space_issue.jpg">
+
+<link rel="canonical" href="http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>hexo cannot use space within tag plugin arguments | Life & Note</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?12217b6eff7690192f4e4469013eee76";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Life & Note" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Life & Note</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">winterTTr Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">23</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">12</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">65</span></a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="winterTTr">
+      <meta itemprop="description" content="Memo down pieces of Life">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Life & Note">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hexo cannot use space within tag plugin arguments
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-07 10:44:06" itemprop="dateCreated datePublished" datetime="2015-11-07T10:44:06+00:00">2015-11-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus: </span>
+    
+    <a title="disqus" href="/2015/11/07/hexo-cannot-use-space-within-tag-arguments/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/07/hexo-cannot-use-space-within-tag-arguments/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>609</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>2 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>When I use the hexo tag plugin, i found that I cannot use space within the parameter of a tag plugin, even I wrap the parameter with double quote. This confuses me a lot.</p>
+<p>Originally, I think this may be the bug of a 3rd party tag plugin for <code>hexo</code>.<br>But after some investigation, this is the bug of hexo itself.</p>
+<span id="more"></span>
+
+<h1 id="Nunjucks"><a href="#Nunjucks" class="headerlink" title="Nunjucks"></a>Nunjucks</h1><p>Before I start to explain about the detail of this bug.<br>I indeed speed several hours to dive into the code of <code>Nunjucks</code>.</p>
+<blockquote><p>Nunjucks<br>A rich and powerful templating language for JavaScript.</p>
+<footer><strong>Nunjucks</strong><cite><a target="_blank" rel="noopener" href="https://mozilla.github.io/nunjucks/">mozilla.github.io/nunjucks</a></cite></footer></blockquote>
+<p><code>Nunjucks</code> is an interesting template framework for JavaScript. It has many great features and one of them used by <code>hexo</code> is the <a target="_blank" rel="noopener" href="https://mozilla.github.io/nunjucks/api.html#custom-tags">custom tag</a>.</p>
+<h1 id="Nunjucks-Custom-Tag"><a href="#Nunjucks-Custom-Tag" class="headerlink" title="Nunjucks Custom Tag"></a>Nunjucks Custom Tag</h1><p>In <code>Nunjucks</code>, you can define the <code>custom tag</code> to integrate it into whole lexical analytics system. So that it will be processed as a <code>Nunjucks</code> native supported tag.</p>
+<p>In order to implement a <code>custom tag</code>, you need to implement two function:</p>
+<h2 id="parse"><a href="#parse" class="headerlink" title="parse"></a>parse</h2><p><code>parse</code> is used to get the travel through lexically-marked token. So that you will analyze each part of the arguments you want for your specific <code>custom tag</code>.<br>For example, if you define a tag like below:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% mytag <span class="string">&quot;param1&quot;</span> <span class="string">&quot;param2&quot;</span> <span class="string">&quot;param3&quot;</span> %&#125;</span><br></pre></td></tr></table></figure>
+<p>You need to define the <code>parse</code> function like:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span>(<span class="params">parser, nodes, lexer</span>)</span><br></pre></td></tr></table></figure>
+
+<p>You use the <code>parser.nextToken()</code> to get each part of your arguments.</p>
+<p>For example (here is the pseudo code to explain, more info refer to <a target="_blank" rel="noopener" href="https://github.com/mozilla/nunjucks/blob/master/src/lexer.js">lexer.js of Nunjucks</a>:</p>
+<ol>
+<li>Node -&gt; { type: TOKEN_WHITESPACE, value: ‘ ‘ }</li>
+<li>Node -&gt; { type: TOKEN_STRING, value: ‘param1’ }</li>
+<li>Node -&gt; { type: TOKEN_WHITESPACE, value: ‘ ‘ }</li>
+<li>Node -&gt; { type: TOKEN_STRING, value: ‘param2’ }</li>
+<li>Node -&gt; { type: TOKEN_WHITESPACE, value: ‘ ‘ }</li>
+<li>Node -&gt; { type: TOKEN_STRING, value: ‘param3’ }</li>
+<li>Node -&gt; { type: TOKEN_BLOCK_END, value: ‘%}’ }</li>
+</ol>
+<p>Usually, we travel through each of the lexical node, save them as specific node in <code>nodes</code> parameter back to <code>Nunjucks</code> framework, and found the <code>TOKEN_BLOCK_END</code> to stop our process for any <code>custom tag</code></p>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><p><code>Run</code> is used to process the information you just analyze from the <code>parse</code> function. Simply speaking, it is used to  render the parameters to its expected result for the case of <code>hexo</code></p>
+<h1 id="Hexo-implementation-issue"><a href="#Hexo-implementation-issue" class="headerlink" title="Hexo implementation issue"></a>Hexo implementation issue</h1><p>Here is the <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/pull/1581">pull request</a> for fix the issue, i would like to talk based on it.</p>
+<p><img src="https://winterttrgithubio.blob.core.windows.net/images/2015-11-07-hexo-cannot-use-space-within-tag-arguments/pull_request_hexo_space_issue.jpg" alt="pull_request_hexo_space_issue.jpg"></p>
+<p>We can see that, current implementation of <code>hexo</code>:</p>
+<ol>
+<li>simply connect all the parameter together as a string in <code>parse</code> function<br>In fact, i do not understand here, it use a array <code>args</code>, but use the string <code>+=</code> to connection all things together, which result in a string. Cannot make sure it is a expected code or the writer think he could use <code>+=</code> for array elements.</li>
+<li>simply split the string with space and ignore all the lexical context in <code>run</code><br><code>Hexo</code> simply split all the parameter with space, this is the root cause for non space supported issue. And it pass the arguments into registered function. so we cannot use the space anymore even wrapped in a string literal.</li>
+</ol>
+<p>One more detail about my change:<br>If you want to use the <code>Nunjucks</code> to pass the result of <code>parse</code> correctly to <code>run</code>, you need to follow the internal structure of <code>Nunjucks</code>. Here my fix need to pass a array to <code>run</code>, instead of give the value of a <code>nodes.Literal</code> a simple javascript array object, we need to create a <code>nodes.Array</code> object, and add each of part of the tag arguments as <code>nodes.Literal</code> into it. so that <code>Nunjucks</code> can understand what we really want to pass.</p>
+<hr>
+<p>So here i give a fix and hope hexo will merge it ASAP.<br>In case anyone see the same issue, so I write it down here.</p>
+<hr>
+<p><strong>References</strong>:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://mozilla.github.io/nunjucks/">Nunjucks</a></li>
+</ul>
+<hr>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/weixin.jpg" alt="winterTTr WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.jpg" alt="winterTTr Alipay">
+        <p>Alipay</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>winterTTr
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/" title="hexo cannot use space within tag plugin arguments">http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/tag-plugin/" rel="tag"><i class="fa fa-tag"></i> tag plugin</a>
+              <a href="/tags/Nunjucks/" rel="tag"><i class="fa fa-tag"></i> Nunjucks</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/11/04/using-surge-with-shadowsocks-under-ios-to-enable-global-network-proxy/" rel="prev" title="在ios设备上使用surge配合shadowsocks开启网络全局代理">
+      <i class="fa fa-chevron-left"></i> 在ios设备上使用surge配合shadowsocks开启网络全局代理
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2015/11/28/Got-the-redeem-code-for-transloader/" rel="next" title="无意中中了一枚transloader的兑换码">
+      无意中中了一枚transloader的兑换码 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nunjucks"><span class="nav-number">1.</span> <span class="nav-text">Nunjucks</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Nunjucks-Custom-Tag"><span class="nav-number">2.</span> <span class="nav-text">Nunjucks Custom Tag</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#parse"><span class="nav-number">2.1.</span> <span class="nav-text">parse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run"><span class="nav-number">2.2.</span> <span class="nav-text">Run</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hexo-implementation-issue"><span class="nav-number">3.</span> <span class="nav-text">Hexo implementation issue</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">winterTTr</p>
+  <div class="site-description" itemprop="description">Memo down pieces of Life</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/winterTTr" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;winterTTr" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:winterTTr@gmail.com" title="E-Mail → mailto:winterTTr@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/winterttr" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/winterttr" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.facebook.com/winterttr" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-facebook fa-fw"></i>FB Page</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/winterttr" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://youtube.com/winterttr" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;winterttr" rel="noopener" target="_blank"><i class="fab fa-youtube fa-fw"></i>YouTube</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://instagram.com/winterttrr" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;winterttrr" rel="noopener" target="_blank"><i class="fab fa-instagram fa-fw"></i>Instagram</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">winterTTr</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="Symbols count total">23k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">1:25</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://winterTTr.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "http://winterttr.me/2015/11/07/hexo-cannot-use-space-within-tag-arguments/";
+    this.page.identifier = "2015/11/07/hexo-cannot-use-space-within-tag-arguments/";
+    this.page.title = "hexo cannot use space within tag plugin arguments";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://winterTTr.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>
